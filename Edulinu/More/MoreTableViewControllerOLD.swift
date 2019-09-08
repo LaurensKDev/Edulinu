@@ -42,7 +42,7 @@ class MoreTableViewControllerOLD: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,7 +54,7 @@ class MoreTableViewControllerOLD: UITableViewController {
     }*/
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellMore", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MoreCell", for: indexPath)
         
         let headline = headlines[indexPath.row]
         
@@ -132,8 +132,8 @@ class MoreTableViewControllerOLD: UITableViewController {
             let deleteAlert = UIAlertController(title: "Bist du sicher?", message: "Die Edulinu-App wird zurückgesetzt und kann dann neu eingerichtet werden.", preferredStyle: .alert)
             deleteAlert.addAction(UIAlertAction(title: "App zurücksetzen", style: .destructive, handler: { action in
                 
-                userdefaults.set(false, forKey: Keys.wasOnSplashscreen) // With this line you can set the userdefault from wasOnSplashscreen in the whole app.
-                userdefaults.set("No name", forKey: Keys.name)
+                edulinuLocalUserSettings.set(false, forKey: Keys.wasOnSplashscreen) // With this line you can set the userdefault from wasOnSplashscreen in the whole app.
+                edulinuLocalUserSettings.set("No name", forKey: Keys.name)
                 
                 self.performSegue(withIdentifier: "goToSplashscreen_reset", sender: self)
                 

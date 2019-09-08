@@ -28,13 +28,13 @@ class MailViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     {
         statusLabel.isHidden = true
         
-        if userdefaults.bool(forKey: Keys.isStudent) == true
+        if edulinuLocalUserSettings.bool(forKey: Keys.isStudent) == true
         {
             statusLabel.isHidden = true
             detailTextView.isHidden = true
             startMailService()
         }
-        else if userdefaults.bool(forKey: Keys.isStudent) == false
+        else if edulinuLocalUserSettings.bool(forKey: Keys.isStudent) == false
         {
             statusLabel.text = "Die Mailfunktion ist nur für Schüler verfügbar."
             detailTextView.text = "Um deinen Benutzerstatus zu ändern, setzte die App bei 'Mehr' zurück."

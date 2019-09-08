@@ -34,7 +34,6 @@ class MoreTableViewController: UITableViewController {
             
             self.moreSections = newMoreSections
             
-            self.moreSections.newentries.append("test")
             
             
 //            print(self.moreSections)
