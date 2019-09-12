@@ -10,7 +10,7 @@
 		0D5F095B23108496008CD288 /* TeacherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F095A23108496008CD288 /* TeacherTableViewController.swift */; };
 		0D5F095F23119269008CD288 /* MoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F095E23119269008CD288 /* MoreSection.swift */; };
 		0D5F09612311942C008CD288 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F09602311942C008CD288 /* MoreTableViewController.swift */; };
-		0D5F09632311CB2D008CD288 /* MoreSectionEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F09622311CB2D008CD288 /* MoreSectionEntry.swift */; };
+		0D5F09632311CB2D008CD288 /* MoreEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F09622311CB2D008CD288 /* MoreEntry.swift */; };
 		0DACC33F2322F74B00B2B56A /* LocalUserSettingsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */; };
 		0DEFDCEE22E63346009D73CA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEFDCED22E63346009D73CA /* Extensions.swift */; };
 		0DFAFC3F2310121D005D52EC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFAFC3E2310121D005D52EC /* App.swift */; };
@@ -41,7 +41,7 @@
 		0D5F095A23108496008CD288 /* TeacherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewController.swift; sourceTree = "<group>"; };
 		0D5F095E23119269008CD288 /* MoreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSection.swift; sourceTree = "<group>"; };
 		0D5F09602311942C008CD288 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
-		0D5F09622311CB2D008CD288 /* MoreSectionEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSectionEntry.swift; sourceTree = "<group>"; };
+		0D5F09622311CB2D008CD288 /* MoreEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreEntry.swift; sourceTree = "<group>"; };
 		0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserSettingsSetup.swift; sourceTree = "<group>"; };
 		0DEFDCED22E63346009D73CA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0DFAFC3E2310121D005D52EC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				0DFAFC3E2310121D005D52EC /* App.swift */,
 				0DFAFC412310139F005D52EC /* Teacher.swift */,
 				0D5F095E23119269008CD288 /* MoreSection.swift */,
-				0D5F09622311CB2D008CD288 /* MoreSectionEntry.swift */,
+				0D5F09622311CB2D008CD288 /* MoreEntry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 				0DACC33F2322F74B00B2B56A /* LocalUserSettingsSetup.swift in Sources */,
 				33D1090C2236ADF900367762 /* MoreOpenLinkViewController.swift in Sources */,
 				0DFAFC422310139F005D52EC /* Teacher.swift in Sources */,
-				0D5F09632311CB2D008CD288 /* MoreSectionEntry.swift in Sources */,
+				0D5F09632311CB2D008CD288 /* MoreEntry.swift in Sources */,
 				33BCBE7C22731CC900561EDC /* WelcomeNameViewController.swift in Sources */,
 				33C3B867222DBD050063CDB1 /* AppDelegate.swift in Sources */,
 				0DEFDCEE22E63346009D73CA /* Extensions.swift in Sources */,

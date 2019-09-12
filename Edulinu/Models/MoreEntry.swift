@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-struct MoreSectionEntry {
+struct MoreEntry {
     
     let ref: DatabaseReference?
     let key: String
@@ -17,15 +17,17 @@ struct MoreSectionEntry {
     let desc: String
     let id: Int
     let onClickAction: String
+    let section: String
     let title: String
     
-    init(URL: String, desc: String, id: Int, onClickAction: String, title: String, key: String = "") {
+    init(URL: String, desc: String, id: Int, onClickAction: String, section: String, title: String, key: String = "") {
         self.ref = nil
         self.key = key
         self.URL = URL
         self.desc = desc
         self.id = id
         self.onClickAction = onClickAction
+        self.section = section
         self.title = title
     }
     
@@ -36,6 +38,7 @@ struct MoreSectionEntry {
             let desc = value["desc"] as? String,
             let id = value["id"] as? Int,
             let onClickAction = value["onClickAction"] as? String,
+            let section = value["section"] as? String,
             let title = value["title"] as? String else {
             return nil
         }
@@ -46,6 +49,7 @@ struct MoreSectionEntry {
         self.desc = desc
         self.id = id
         self.onClickAction = onClickAction
+        self.section = section
         self.title = title
         
     }
@@ -56,6 +60,7 @@ struct MoreSectionEntry {
             "desc": desc,
             "id": id,
             "onClickAction": onClickAction,
+            "sectiom": section,
             "title": title
         ]
     }

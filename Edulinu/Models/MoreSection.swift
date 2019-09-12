@@ -13,40 +13,40 @@ struct MoreSection {
     
     let ref: DatabaseReference?
     let key: String
-    let entries: Dictionary<String, AnyObject>
     let id: Int
     let name: String
+    let identifier: String
     
-    init(entries: Dictionary<String, AnyObject>, id: Int, name: String, key: String = "") {
+    init(id: Int, name: String, identifier: String, key: String = "") {
         self.ref = nil
         self.key = key
-        self.entries = entries
         self.id = id
         self.name = name
+        self.identifier = identifier
     }
     
     init?(snapshot: DataSnapshot) {
         guard
             let value = snapshot.value as? [String: AnyObject],
-            let entries = value["entries"] as? Dictionary<String, AnyObject>,
             let id = value["id"] as? Int,
-            let name = value["name"] as? String else {
+            let name = value["name"] as? String,
+            let identifier = value["identifier"] as? String else {
             return nil
         }
         
         self.ref = snapshot.ref
         self.key = snapshot.key
-        self.entries = entries
         self.id = id
         self.name = name
+        self.identifier = identifier
         
     }
     
     func toAnyObject() -> Any {
         return [
-            "entries": entries,
             "id": id,
-            "name": name
+            "name": name,
+            "identifier": identifier
         ]
     }
 }
