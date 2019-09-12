@@ -87,6 +87,8 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
         let cell = tableView.dequeueReusableCell(withIdentifier: "MoreCell", for: indexPath)
         
         let entry = sections[indexPath.section].entries[indexPath.row]
+        
+        cell.accessoryType = .disclosureIndicator
 
         cell.textLabel?.text = entry.title
         cell.detailTextLabel?.text = entry.desc
@@ -122,11 +124,16 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
                 
                     matchedEntries.append(MoreEntry(URL: entry.URL, desc: entry.desc, id: entry.id, onClickAction: entry.onClickAction, section: entry.section, title: entry.title))
                     
+                    
                 }
+                
                 
             }
             
+            
             matchedSections.append(matchSections(name: section.name, id: section.id, identifier: section.identifier, entries: matchedEntries))
+            
+            matchedEntries = []
             
         }
         
@@ -151,6 +158,10 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
         } else if entry.onClickAction == "appInfo" {
             
             appInfo()
+            
+        } else if entry.onClickAction == "openMail" {
+            
+            openMail(entry.URL)
             
         } else {
             
@@ -200,6 +211,12 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
     func appInfo() {
         
         performSegue(withIdentifier: "appInfo", sender: self)
+        
+    }
+    
+    func openMail(_ mailString: String) {
+        
+        UIApplication.shared.open(URL(string: mailString)! as URL, options: [:], completionHandler: nil)
         
     }
     
