@@ -59,7 +59,7 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
         cell.detailTextLabel?.text = teacher.desc
         
         cell.imageView?.sd_setImage(with: URL(string: teacher.imageURL), placeholderImage: UIImage(named: "loading214x322_white"), options: [])
-        cell.imageView?.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        //cell.imageView?.sd_imageIndicator = SDWebImageActivityIndicator.gray
         
         return cell
     }
@@ -75,23 +75,6 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
         
         showPortal(teacher.hasPortal, teacher.portalURL, teacher.firstName, teacher.lastName, teacher.gender)
     }
-    
-//    func portal (_ shortForm: String) {
-//        if shortForm.isEmpty {
-//
-//            let alert = UIAlertController(title: "Kein Portal", message: "Diese/r Lehrer/in hat kein Portal", preferredStyle: .alert)
-//
-//            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-//
-//            self.present(alert, animated: true)
-//
-//        } else if !shortForm.isEmpty {
-//            teacherShort = shortForm
-//            performSegue(withIdentifier: "openPortalseiten", sender: self)
-//            mustLoadFromTeacherSelect = true
-//        }
-//
-//    }
     
     func showPortal (_ hasPortal: Bool, _ portalURL: String, _ firstName: String, _ lastName: String, _ gender: String) {
         

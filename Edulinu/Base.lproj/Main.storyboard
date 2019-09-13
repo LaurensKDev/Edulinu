@@ -107,7 +107,7 @@
                             <outlet property="delegate" destination="WZz-DV-RD6" id="FVS-ih-Ret"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Mehr" largeTitleDisplayMode="never" id="H1F-Lz-24S"/>
+                    <navigationItem key="navigationItem" title="Mehr" id="H1F-Lz-24S"/>
                     <connections>
                         <segue destination="aqF-rP-EpG" kind="show" identifier="goToSplashscreen_reset" id="eFZ-dT-ZGq"/>
                         <segue destination="NIR-PI-Tky" kind="show" identifier="appInfo" id="azG-ab-ubo"/>

@@ -58,7 +58,7 @@ class AppsTableViewController: UITableViewController {
         cell.detailTextLabel?.text = app.desc
 
         cell.imageView?.sd_setImage(with: URL(string: app.imageURL), placeholderImage: UIImage(named: "loading512x512_white"), options: [])
-        cell.imageView?.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        //cell.imageView?.sd_imageIndicator = SDWebImageActivityIndicator.gray
         
         return cell
     }
