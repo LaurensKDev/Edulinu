@@ -13,6 +13,8 @@
 		0D5F09632311CB2D008CD288 /* MoreEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F09622311CB2D008CD288 /* MoreEntry.swift */; };
 		0DACC33F2322F74B00B2B56A /* LocalUserSettingsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */; };
 		0DC1FA83232ACF3E00DF5A88 /* AppInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */; };
+		0DCDD017232CF27C00FD5CD9 /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD016232CF27C00FD5CD9 /* MaintenanceViewController.swift */; };
+		0DCDD019232CF68D00FD5CD9 /* Maintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD018232CF68D00FD5CD9 /* Maintenance.swift */; };
 		0DEFDCEE22E63346009D73CA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEFDCED22E63346009D73CA /* Extensions.swift */; };
 		0DFAFC3F2310121D005D52EC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFAFC3E2310121D005D52EC /* App.swift */; };
 		0DFAFC422310139F005D52EC /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFAFC412310139F005D52EC /* Teacher.swift */; };
@@ -44,6 +46,8 @@
 		0D5F09622311CB2D008CD288 /* MoreEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreEntry.swift; sourceTree = "<group>"; };
 		0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserSettingsSetup.swift; sourceTree = "<group>"; };
 		0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoTableViewController.swift; sourceTree = "<group>"; };
+		0DCDD016232CF27C00FD5CD9 /* MaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
+		0DCDD018232CF68D00FD5CD9 /* Maintenance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maintenance.swift; sourceTree = "<group>"; };
 		0DEFDCED22E63346009D73CA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0DFAFC3E2310121D005D52EC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		0DFAFC412310139F005D52EC /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -115,6 +119,14 @@
 			path = AppInfo;
 			sourceTree = "<group>";
 		};
+		0DCDD015232CF25F00FD5CD9 /* Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				0DCDD016232CF27C00FD5CD9 /* MaintenanceViewController.swift */,
+			);
+			path = Maintenance;
+			sourceTree = "<group>";
+		};
 		0DEFDCEC22E62E7E009D73CA /* Apps */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 				0DFAFC412310139F005D52EC /* Teacher.swift */,
 				0D5F095E23119269008CD288 /* MoreSection.swift */,
 				0D5F09622311CB2D008CD288 /* MoreEntry.swift */,
+				0DCDD018232CF68D00FD5CD9 /* Maintenance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +187,7 @@
 		33C3B865222DBD050063CDB1 /* Edulinu */ = {
 			isa = PBXGroup;
 			children = (
+				0DCDD015232CF25F00FD5CD9 /* Maintenance */,
 				0DC1FA81232ACF2000DF5A88 /* AppInfo */,
 				0DFAFC4023101225005D52EC /* Models */,
 				33ACFF3F22746B3E00207C2E /* More */,
@@ -335,6 +349,7 @@
 			files = (
 				33BCBE8022732A4E00561EDC /* WelcomeFinishViewController.swift in Sources */,
 				33BB6475222DBFAB007247C8 /* ViewController.swift in Sources */,
+				0DCDD017232CF27C00FD5CD9 /* MaintenanceViewController.swift in Sources */,
 				33BCBE7E227320E700561EDC /* WelcomeLoginViewController.swift in Sources */,
 				33ACFF4122746C4700207C2E /* MailViewController.swift in Sources */,
 				0D5F09612311942C008CD288 /* MoreTableViewController.swift in Sources */,
@@ -344,6 +359,7 @@
 				0DC1FA83232ACF3E00DF5A88 /* AppInfoTableViewController.swift in Sources */,
 				0D5F095F23119269008CD288 /* MoreSection.swift in Sources */,
 				0DACC33F2322F74B00B2B56A /* LocalUserSettingsSetup.swift in Sources */,
+				0DCDD019232CF68D00FD5CD9 /* Maintenance.swift in Sources */,
 				0DFAFC422310139F005D52EC /* Teacher.swift in Sources */,
 				0D5F09632311CB2D008CD288 /* MoreEntry.swift in Sources */,
 				33BCBE7C22731CC900561EDC /* WelcomeNameViewController.swift in Sources */,

@@ -23,7 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
+        let ref = Database.database().reference(withPath: "maintenance")
+        ref.observe(.value, with: { (snapshot) in
+            if let value = snapshot.value as? [String: Any] {
+                let maintenanceMode = value["maintenanceMode"] as? Bool ?? false
+                if maintenanceMode == true {
+                    let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let maintenanceViewController = mainStoryboard.instantiateViewController(withIdentifier: "MaintenanceViewController") as! MaintenanceViewController
+                    self.window?.rootViewController = maintenanceViewController
+                }
+            }
+        })
         
         
         return true

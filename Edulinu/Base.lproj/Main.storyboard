@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linu" translatesAutoresizingMaskIntoConstraints="NO" id="mky-x7-064">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linu_liest" translatesAutoresizingMaskIntoConstraints="NO" id="mky-x7-064">
                                 <rect key="frame" x="-13" y="104" width="117" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="6Ll-jZ-7ov"/>
@@ -263,6 +263,59 @@
             </objects>
             <point key="canvasLocation" x="2278" y="-487"/>
         </scene>
+        <!--Maintenance View Controller-->
+        <scene sceneID="kyA-Of-I0K">
+            <objects>
+                <viewController storyboardIdentifier="MaintenanceViewController" id="6Jv-pe-k8U" customClass="MaintenanceViewController" customModule="Edulinu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dku-Aa-A3e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neue Lehrer im Anflug..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cal-i8-dqn">
+                                <rect key="frame" x="16" y="562.66666666666663" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Wir updaten unsere Datenbank! Komme in 5 Minuten wieder vorbei." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOE-LN-mB6">
+                                <rect key="frame" x="38" y="605" width="299" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linu_liest" translatesAutoresizingMaskIntoConstraints="NO" id="VHR-n5-2FV">
+                                <rect key="frame" x="97.666666666666686" y="316" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="1Fh-1a-HTc"/>
+                                    <constraint firstAttribute="height" constant="180" id="AqW-7j-VdJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="D7e-Qf-cFz"/>
+                                    <constraint firstAttribute="width" constant="180" id="NcP-vQ-g7f"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mOE-LN-mB6" firstAttribute="top" secondItem="Cal-i8-dqn" secondAttribute="bottom" constant="12.33" id="HV2-Oq-0me"/>
+                            <constraint firstItem="tuH-2A-5ia" firstAttribute="bottom" secondItem="mOE-LN-mB6" secondAttribute="bottom" constant="45" id="Kvq-yL-U4G"/>
+                            <constraint firstItem="Cal-i8-dqn" firstAttribute="top" secondItem="VHR-n5-2FV" secondAttribute="bottom" constant="66.670000000000002" id="L8A-Ue-Aer"/>
+                            <constraint firstItem="Cal-i8-dqn" firstAttribute="leading" secondItem="tuH-2A-5ia" secondAttribute="leading" constant="16" id="N2H-VY-oBx"/>
+                            <constraint firstItem="VHR-n5-2FV" firstAttribute="centerX" secondItem="Dku-Aa-A3e" secondAttribute="centerX" id="YyC-L0-wX2"/>
+                            <constraint firstItem="tuH-2A-5ia" firstAttribute="trailing" secondItem="Cal-i8-dqn" secondAttribute="trailing" constant="16" id="ify-lD-BA7"/>
+                            <constraint firstItem="tuH-2A-5ia" firstAttribute="trailing" secondItem="mOE-LN-mB6" secondAttribute="trailing" constant="38" id="jLI-Nw-Xt8"/>
+                            <constraint firstItem="VHR-n5-2FV" firstAttribute="centerY" secondItem="Dku-Aa-A3e" secondAttribute="centerY" id="jbZ-WI-GvI"/>
+                            <constraint firstItem="mOE-LN-mB6" firstAttribute="leading" secondItem="tuH-2A-5ia" secondAttribute="leading" constant="38" id="ofv-aZ-yf5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tuH-2A-5ia"/>
+                    </view>
+                    <connections>
+                        <outlet property="maintenanceMessageLabel" destination="mOE-LN-mB6" id="5xg-Lp-WgB"/>
+                        <outlet property="maintenanceTitleLabel" destination="Cal-i8-dqn" id="Ijb-fW-ubo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Odk-ER-eda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4177" y="-459"/>
+        </scene>
         <!--Edulinu Mails-->
         <scene sceneID="DQr-zy-hm9">
             <objects>
@@ -339,7 +392,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBs-n0-N6d">
-                                <rect key="frame" x="136" y="693" width="103" height="36"/>
+                                <rect key="frame" x="136" y="742" width="103" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Ich bin bereit"/>
                                 <connections>
@@ -610,7 +663,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="O8t-7h-08Q">
             <objects>
-                <tabBarController id="Vqd-Ab-NG9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RootViewController" id="Vqd-Ab-NG9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="i9w-OL-jyb"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iv5-2V-Gyj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -711,6 +764,7 @@
     </scenes>
     <resources>
         <image name="Linu" width="2100" height="2100"/>
+        <image name="Linu_liest" width="1000" height="1000"/>
         <image name="apps-icon" width="30" height="30"/>
         <image name="info-icon" width="30" height="30"/>
         <image name="lehrer-icon" width="30" height="30"/>
@@ -719,6 +773,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Nhe-ER-6BF"/>
-        <segue reference="eFZ-dT-ZGq"/>
+        <segue reference="Wcp-2b-Acw"/>
     </inferredMetricsTieBreakers>
 </document>

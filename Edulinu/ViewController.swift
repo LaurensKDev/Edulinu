@@ -19,6 +19,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstNameLabel: UILabel!
     
+    @IBAction func maintananceButton(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let maintenanceViewController = storyboard.instantiateViewController(withIdentifier: "MaintenanceViewController")
+        self.present(maintenanceViewController, animated: true, completion: nil)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
