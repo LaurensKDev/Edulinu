@@ -11,8 +11,12 @@ import Foundation
 let edulinuLocalUserSettings = UserDefaults.standard
 
 struct Keys {
-    static let wasOnSplashscreen = "wasOnSplashscreen"
-    static let name = "name"
-    static let isStudent = "isStudent"
-    static let hasAgreedMailMessage = "hasAgreedMailMessage"
+    static let ElusDidSplash = "ElusDidSplash"
+    static let ElusFirstName = "ElusFirstName"
+    static let ElusLastName = "ElusLastName"
+    static let ElusUserRole = "ElusUserRole" // "student" or "parent"
+    static let ElusClass = "ElusClass"
+    static let ElusHasAgreedToSentStatistics = "ElusHasAgreedToSentStatistics"
 }
+
+//edulinuLocalUserSettings.bool(forKey: Keys.ElusDidSplash)

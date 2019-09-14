@@ -14,3 +14,9 @@ extension String {
         return !isEmpty && range(of: "[^a-zA-Z]", options: .regularExpression) == nil
     }
 }
+
+extension String {
+    var isName: Bool {
+        return !isEmpty && range(of: "[^a-zA-Z ]", options: .regularExpression) == nil
+    }
+}

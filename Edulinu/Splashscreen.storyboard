@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Welcome View Controller-->
+        <scene sceneID="dMB-sK-maP">
+            <objects>
+                <viewController storyboardIdentifier="SplashWelcomeViewController" id="MtL-t7-f6q" customClass="SplashWelcomeViewController" customModule="Edulinu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rmu-vo-wXP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM5-19-yJG">
+                                <rect key="frame" x="67.666666666666686" y="426" width="240" height="225"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="6Vq-xf-D3V"/>
+                                    <constraint firstAttribute="width" constant="240" id="bxg-fj-KfV"/>
+                                </constraints>
+                                <string key="text">Zusammen werden wir jetzt die Edulinu-App einrichten, damit du gleich loslegen kannst. Als nächstes werde ich dich um deinen Namen fragen und dich darum bitten, deine aktuelle Klasse auszuwählen. Let's go!</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vey-hJ-hgT">
+                                <rect key="frame" x="136" y="742" width="103" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Ich bin bereit"/>
+                                <connections>
+                                    <action selector="SplashToFormVC:" destination="MtL-t7-f6q" eventType="touchUpInside" id="tfu-cf-Wf1"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linu_liest" translatesAutoresizingMaskIntoConstraints="NO" id="9Ye-le-F13">
+                                <rect key="frame" x="137.66666666666666" y="169" width="100" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="UPa-1K-aD6"/>
+                                    <constraint firstAttribute="height" constant="85" id="u0w-Bb-HZC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hallo, ich bin Linu!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FM9-Ix-xvO">
+                                <rect key="frame" x="116" y="394" width="143" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willkommen bei Edulinu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtd-Ff-uOF">
+                                <rect key="frame" x="30.666666666666657" y="262" width="314" height="39"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vey-hJ-hgT" firstAttribute="bottom" secondItem="Dif-Du-S0N" secondAttribute="bottom" id="7Ml-Bt-koW"/>
+                            <constraint firstItem="Vtd-Ff-uOF" firstAttribute="top" secondItem="9Ye-le-F13" secondAttribute="bottom" constant="8" id="A26-HZ-d9J"/>
+                            <constraint firstItem="9Ye-le-F13" firstAttribute="centerX" secondItem="rmu-vo-wXP" secondAttribute="centerX" id="Hmq-5S-6F3"/>
+                            <constraint firstItem="FM9-Ix-xvO" firstAttribute="centerY" secondItem="rmu-vo-wXP" secondAttribute="centerY" id="Pmw-MW-L1c"/>
+                            <constraint firstItem="lM5-19-yJG" firstAttribute="top" secondItem="FM9-Ix-xvO" secondAttribute="bottom" constant="8" id="UKC-xn-Vhi"/>
+                            <constraint firstItem="Vtd-Ff-uOF" firstAttribute="centerX" secondItem="rmu-vo-wXP" secondAttribute="centerX" id="g08-e1-stj"/>
+                            <constraint firstItem="vey-hJ-hgT" firstAttribute="centerX" secondItem="rmu-vo-wXP" secondAttribute="centerX" id="nb1-zI-74k"/>
+                            <constraint firstItem="FM9-Ix-xvO" firstAttribute="top" secondItem="Vtd-Ff-uOF" secondAttribute="bottom" constant="93" id="nuL-xY-ua7"/>
+                            <constraint firstItem="FM9-Ix-xvO" firstAttribute="centerX" secondItem="rmu-vo-wXP" secondAttribute="centerX" id="p3H-5w-RCy"/>
+                            <constraint firstItem="lM5-19-yJG" firstAttribute="centerX" secondItem="rmu-vo-wXP" secondAttribute="centerX" id="tnh-lg-jU2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dif-Du-S0N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fJ-TD-dEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="-1368"/>
+        </scene>
+        <!--Splash Form View Controller-->
+        <scene sceneID="VJw-ji-wz4">
+            <objects>
+                <viewController id="Qaa-KC-wcz" customClass="SplashFormViewController" customModule="Edulinu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b1o-79-Xp7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1vM-WA-73u"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MU1-xS-RGL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WkS-4K-xxE">
+                            <connections>
+                                <action selector="saveButton:" destination="Qaa-KC-wcz" id="b0a-s2-M1d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qb6-RZ-1ZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2279" y="-1377"/>
+        </scene>
+        <!--Splash Get Started View Controller-->
+        <scene sceneID="p9V-U7-8q2">
+            <objects>
+                <viewController storyboardIdentifier="SplashGetStartedViewController" id="fZI-VV-pBI" customClass="SplashGetStartedViewController" customModule="Edulinu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e1p-E5-SWs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Du hast es geschafft!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhq-x9-GNp">
+                                <rect key="frame" x="55" y="262" width="265" height="39"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linu_liest" translatesAutoresizingMaskIntoConstraints="NO" id="EdY-Nk-vCH">
+                                <rect key="frame" x="137.66666666666666" y="169" width="100" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="2Pc-71-gWw"/>
+                                    <constraint firstAttribute="width" constant="100" id="Qm1-5h-K9D"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userwelcomemessage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifL-Qq-vRK">
+                                <rect key="frame" x="101" y="394" width="173" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Jetzt kannst du die Edulinu-App zum ersten Mal starten! Viel Spaß und Erfolg 👍" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5o-C5-1bu">
+                                <rect key="frame" x="67.666666666666686" y="426" width="240" height="109"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="b9g-Sk-USe"/>
+                                    <constraint firstAttribute="height" constant="109" id="wN1-YE-mag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XQ-gT-Hb1">
+                                <rect key="frame" x="157" y="742" width="61" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Let's go"/>
+                                <connections>
+                                    <action selector="startAppButton:" destination="fZI-VV-pBI" eventType="touchUpInside" id="WXr-f1-yz9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ifL-Qq-vRK" firstAttribute="centerY" secondItem="e1p-E5-SWs" secondAttribute="centerY" id="0jC-GC-gtY"/>
+                            <constraint firstItem="ifL-Qq-vRK" firstAttribute="centerX" secondItem="e1p-E5-SWs" secondAttribute="centerX" id="3UY-hF-MW7"/>
+                            <constraint firstItem="Bhq-x9-GNp" firstAttribute="top" secondItem="EdY-Nk-vCH" secondAttribute="bottom" constant="8" id="Co2-kq-08B"/>
+                            <constraint firstItem="Bhq-x9-GNp" firstAttribute="centerX" secondItem="e1p-E5-SWs" secondAttribute="centerX" id="Dyq-ah-AHm"/>
+                            <constraint firstItem="EdY-Nk-vCH" firstAttribute="centerX" secondItem="e1p-E5-SWs" secondAttribute="centerX" id="Ow3-Un-Ocx"/>
+                            <constraint firstItem="5XQ-gT-Hb1" firstAttribute="centerX" secondItem="e1p-E5-SWs" secondAttribute="centerX" id="SNz-xu-TFR"/>
+                            <constraint firstItem="x5o-C5-1bu" firstAttribute="centerX" secondItem="e1p-E5-SWs" secondAttribute="centerX" id="nzo-RF-sCR"/>
+                            <constraint firstItem="ifL-Qq-vRK" firstAttribute="top" secondItem="Bhq-x9-GNp" secondAttribute="bottom" constant="93" id="qRR-Rx-vCW"/>
+                            <constraint firstItem="x5o-C5-1bu" firstAttribute="top" secondItem="ifL-Qq-vRK" secondAttribute="bottom" constant="8" id="wWA-cR-N6R"/>
+                            <constraint firstItem="5XQ-gT-Hb1" firstAttribute="bottom" secondItem="q6D-Sw-Sa3" secondAttribute="bottom" id="zdh-cp-YU1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q6D-Sw-Sa3"/>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeMessageLabel" destination="ifL-Qq-vRK" id="EdI-ah-Gx6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wnl-3K-5lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073" y="-1368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="014-0s-E0M">
+            <objects>
+                <navigationController storyboardIdentifier="SplashFormViewController" automaticallyAdjustsScrollViewInsets="NO" id="oJR-Xw-JuK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hfL-Ak-bj7">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qaa-KC-wcz" kind="relationship" relationship="rootViewController" id="QzP-kf-ie1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQy-XW-tVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1588" y="-1377"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Linu_liest" width="1000" height="1000"/>
+    </resources>
+</document>

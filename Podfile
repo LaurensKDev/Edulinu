@@ -10,5 +10,6 @@ target 'Edulinu' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
   pod 'SDWebImage'
+  pod 'Eureka'
 
 end

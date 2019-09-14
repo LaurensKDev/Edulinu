@@ -28,13 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let value = snapshot.value as? [String: Any] {
                 let maintenanceMode = value["maintenanceMode"] as? Bool ?? false
                 if maintenanceMode == true {
-                    let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let mainStoryboard:UIStoryboard = UIStoryboard(name: "Maintenance", bundle: nil)
                     let maintenanceViewController = mainStoryboard.instantiateViewController(withIdentifier: "MaintenanceViewController") as! MaintenanceViewController
                     self.window?.rootViewController = maintenanceViewController
                 }
             }
         })
         
+        if edulinuLocalUserSettings.bool(forKey: Keys.ElusDidSplash) == false {
+            let splashscreenStoryboard:UIStoryboard = UIStoryboard(name: "Splashscreen", bundle: nil)
+            let splashWelcomeViewController = splashscreenStoryboard.instantiateViewController(withIdentifier: "SplashWelcomeViewController") as! SplashWelcomeViewController
+            self.window?.rootViewController = splashWelcomeViewController
+        }
         
         return true
     }

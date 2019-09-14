@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Maintenance View Controller-->
+        <scene sceneID="gtY-dw-lZ4">
+            <objects>
+                <viewController storyboardIdentifier="MaintenanceViewController" id="76S-To-dQS" customClass="MaintenanceViewController" customModule="Edulinu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yFw-nf-vX5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neue Lehrer im Anflug..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-rI-5me">
+                                <rect key="frame" x="16" y="562.66666666666663" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Wir updaten unsere Datenbank! Komme in 5 Minuten wieder vorbei." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTV-yc-ZKr">
+                                <rect key="frame" x="38" y="605" width="299" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linu_liest" translatesAutoresizingMaskIntoConstraints="NO" id="gEW-h4-llp">
+                                <rect key="frame" x="97.666666666666686" y="316" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="Jzm-id-C3J"/>
+                                    <constraint firstAttribute="height" constant="180" id="ZAh-t6-KIk"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="huj-l6-EoR"/>
+                                    <constraint firstAttribute="width" constant="180" id="jQb-Gq-X0z"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ofc-rI-5me" firstAttribute="top" secondItem="gEW-h4-llp" secondAttribute="bottom" constant="66.670000000000002" id="8OO-bS-Nds"/>
+                            <constraint firstItem="iTV-yc-ZKr" firstAttribute="top" secondItem="ofc-rI-5me" secondAttribute="bottom" constant="12.33" id="GD1-I9-dEA"/>
+                            <constraint firstItem="azX-pE-JYf" firstAttribute="trailing" secondItem="iTV-yc-ZKr" secondAttribute="trailing" constant="38" id="GZm-39-l7r"/>
+                            <constraint firstItem="iTV-yc-ZKr" firstAttribute="leading" secondItem="azX-pE-JYf" secondAttribute="leading" constant="38" id="JKQ-zz-Mbg"/>
+                            <constraint firstItem="gEW-h4-llp" firstAttribute="centerX" secondItem="yFw-nf-vX5" secondAttribute="centerX" id="dRJ-Xj-Ci6"/>
+                            <constraint firstItem="azX-pE-JYf" firstAttribute="bottom" secondItem="iTV-yc-ZKr" secondAttribute="bottom" constant="45" id="fNM-X2-qlm"/>
+                            <constraint firstItem="azX-pE-JYf" firstAttribute="trailing" secondItem="ofc-rI-5me" secondAttribute="trailing" constant="16" id="m8U-t6-faq"/>
+                            <constraint firstItem="gEW-h4-llp" firstAttribute="centerY" secondItem="yFw-nf-vX5" secondAttribute="centerY" id="x3R-PS-UQO"/>
+                            <constraint firstItem="ofc-rI-5me" firstAttribute="leading" secondItem="azX-pE-JYf" secondAttribute="leading" constant="16" id="xj2-lj-lUY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="azX-pE-JYf"/>
+                    </view>
+                    <connections>
+                        <outlet property="maintenanceMessageLabel" destination="iTV-yc-ZKr" id="gLS-01-D0a"/>
+                        <outlet property="maintenanceTitleLabel" destination="ofc-rI-5me" id="vcn-Ff-MPz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDo-qC-E0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3898" y="-861"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Linu_liest" width="1000" height="1000"/>
+    </resources>
+</document>

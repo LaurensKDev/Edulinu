@@ -191,18 +191,19 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
         
         let deleteAlert = UIAlertController(title: "Bist du sicher?", message: "Die Edulinu-App wird zurückgesetzt und kann dann neu eingerichtet werden.", preferredStyle: .alert)
         deleteAlert.addAction(UIAlertAction(title: "App zurücksetzen", style: .destructive, handler: { action in
-            
-            edulinuLocalUserSettings.set(false, forKey: Keys.wasOnSplashscreen) // With this line you can set the userdefault from wasOnSplashscreen in the whole app.
-            edulinuLocalUserSettings.set("No name", forKey: Keys.name)
-            
-            self.performSegue(withIdentifier: "goToSplashscreen_reset", sender: self)
-            
-            let alert = UIAlertController(title: "App zurückgesetzt", message: "Die Edulinu-App wurde zurückgesetzt und kann nun neu eingerichtet werden.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Edulinu einrichten", style: .cancel, handler: nil))
-            self.present(alert, animated: true)
-            
+
+            edulinuLocalUserSettings.set(false, forKey: Keys.ElusDidSplash)
+            edulinuLocalUserSettings.set("noFirstName", forKey: Keys.ElusFirstName)
+            edulinuLocalUserSettings.set("noLastName", forKey: Keys.ElusLastName)
+            edulinuLocalUserSettings.set("noClass", forKey: Keys.ElusClass)
+            edulinuLocalUserSettings.set(true, forKey: Keys.ElusHasAgreedToSentStatistics)
+
+            let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
+            let splashWelcomeViewController = storyboard.instantiateViewController(withIdentifier: "SplashWelcomeViewController") as! SplashWelcomeViewController
+            self.present(splashWelcomeViewController, animated: true, completion: nil)
+
         }))
-        
+
         deleteAlert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: nil))
         self.present(deleteAlert, animated: true)
         
