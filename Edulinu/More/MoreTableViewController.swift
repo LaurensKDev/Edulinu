@@ -236,11 +236,17 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
     
     func onClickActionNotAvailable() {
         
-        let alert = UIAlertController(title: "App-Version veraltet", message: "Bitte aktualisiere die Edulinu-App im App Store, um diese Funktion nutzen zu können", preferredStyle: .alert)
+        let UpdateAppAlert = UIAlertController(title: "App-Version veraltet", message: "Bitte aktualisiere die Edulinu-App im App Store, um diese Funktion nutzen zu können.", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        UpdateAppAlert.addAction(UIAlertAction(title: "Zum App Store", style: .default, handler: { action in
+            
+            UIApplication.shared.open(URL(string: "itms-apps://?action=updates")! as URL, options: [:], completionHandler: nil)
+            
+        }))
         
-        self.present(alert, animated: true)
+        UpdateAppAlert.addAction(UIAlertAction(title: "Schließen", style: .cancel, handler: nil))
+        
+        self.present(UpdateAppAlert, animated: true)
         
     }
         
