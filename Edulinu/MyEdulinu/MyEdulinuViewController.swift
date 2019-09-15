@@ -82,7 +82,7 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         self.teachers = self.matchTeachers(self.myEdTeachers, edulinuLocalUserSettings.array(forKey: Keys.ElusFavouriteTeachers) as! Array<String>)
         
