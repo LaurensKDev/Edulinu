@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 struct AppInfo {
     
@@ -19,9 +20,15 @@ struct AppInfo {
 
 class AppInfoTableViewController: UITableViewController {
     
-    
+    var appInfoDatabaseVersion: String = ""
+    var appInfoDatabaseRoot: String = ""
+    var appInfoDeveloper: String = ""
+    var appInfoDevelopmentTimeHours: Int = 0
+    var appInfoDevelopmentTimeMinutes: Int = 0
     
     var appInfoRows: [AppInfo] = []
+    
+    let ref = Database.database().reference(withPath: "appInfo")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +39,27 @@ class AppInfoTableViewController: UITableViewController {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
         
-        appInfoRows.append(AppInfo(id: 0, title: "App-Version", text: appVersion!))
-        appInfoRows.append(AppInfo(id: 1, title: "Build-Nummer", text: build!))
-        appInfoRows.append(AppInfo(id: 1, title: "Entwickler", text: "Laurens K."))
-        
-        tableView.reloadData()
-        
+        ref.observe(.value, with: { (snapshot) in
+            if let value = snapshot.value as? [String: Any] {
+                self.appInfoDatabaseVersion = value["appInfoDatabaseVersion"] as? String ?? ""
+                self.appInfoDatabaseRoot = value["appInfoDatabaseRoot"] as? String ?? ""
+                self.appInfoDeveloper = value["appInfoDeveloper"] as? String ?? ""
+                self.appInfoDevelopmentTimeHours = value["appInfoDevelopmentTimeHours"] as? Int ?? 0
+                self.appInfoDevelopmentTimeMinutes = value["appInfoDevelopmentTimeMinutes"] as? Int ?? 0
+                
+                self.appInfoRows = []
+                
+                self.appInfoRows.append(AppInfo(id: 0, title: "App-Version", text: appVersion!))
+                self.appInfoRows.append(AppInfo(id: 1, title: "App-Build", text: build!))
+                self.appInfoRows.append(AppInfo(id: 1, title: "Datenbank-Version", text: self.appInfoDatabaseVersion))
+                self.appInfoRows.append(AppInfo(id: 1, title: "Datenbank-Root", text: self.appInfoDatabaseRoot))
+                self.appInfoRows.append(AppInfo(id: 1, title: "Entwickler", text: self.appInfoDeveloper))
+                self.appInfoRows.append(AppInfo(id: 1, title: "Entwicklungszeit", text: "\(self.appInfoDevelopmentTimeHours) h \(self.appInfoDevelopmentTimeMinutes) min"))
+                
+                self.tableView.reloadData()
+                
+            }
+        })
     }
 
     // MARK: - Table view data source
