@@ -16,7 +16,9 @@ struct Keys {
     static let ElusLastName = "ElusLastName"
     static let ElusUserRole = "ElusUserRole" // "student" or "parent"
     static let ElusClass = "ElusClass"
+    static let ElusClassLastUpdateDate = "ElusClassLastUpdateDate"
     static let ElusHasAgreedToSentStatistics = "ElusHasAgreedToSentStatistics"
+    static let ElusFavouriteTeachers = "ElusFavouriteTeachers"
 }
 
 //edulinuLocalUserSettings.bool(forKey: Keys.ElusDidSplash)

@@ -41,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = splashWelcomeViewController
         }
         
+        if edulinuLocalUserSettings.array(forKey: Keys.ElusFavouriteTeachers) == nil {
+            edulinuLocalUserSettings.set([""], forKey: Keys.ElusFavouriteTeachers)
+        }
+        
         return true
     }
 

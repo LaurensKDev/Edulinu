@@ -30,15 +30,19 @@ class SplashFormViewController: FormViewController {
             if !firstName.isEmpty && !lastName.isEmpty && !pmsClass.isEmpty && pmsClass != "Bitte auswählen" {
                 
                 if pmsClass == "Ich bin ein Elternteil" {
-                    edulinuLocalUserSettings.set("student", forKey: Keys.ElusUserRole)
-                } else {
                     edulinuLocalUserSettings.set("parent", forKey: Keys.ElusUserRole)
+                } else if pmsClass == "Ich bin Lehrer/in" {
+                    edulinuLocalUserSettings.set("teacher", forKey: Keys.ElusUserRole)
+                } else {
+                    edulinuLocalUserSettings.set("student", forKey: Keys.ElusUserRole)
                 }
                 
                 edulinuLocalUserSettings.set(firstName, forKey: Keys.ElusFirstName)
                 edulinuLocalUserSettings.set(lastName, forKey: Keys.ElusLastName)
                 edulinuLocalUserSettings.set(pmsClass, forKey: Keys.ElusClass)
+                edulinuLocalUserSettings.set(Date(), forKey: Keys.ElusClassLastUpdateDate)
                 edulinuLocalUserSettings.set(true, forKey: Keys.ElusDidSplash)
+                edulinuLocalUserSettings.set([""], forKey: Keys.ElusFavouriteTeachers)
                 
                 let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
                 let splashGetStartedViewController = storyboard.instantiateViewController(withIdentifier: "SplashGetStartedViewController") as! SplashGetStartedViewController
@@ -85,7 +89,7 @@ class SplashFormViewController: FormViewController {
             
             <<< PickerInlineRow<String>(){
                 $0.title = "Klasse auswählen"
-                $0.options = ["Ich bin ein Elternteil","1A","1B","1C"]
+                $0.options = ["Ich bin ein Elternteil","1A","1B","1C","1D","2A","2B","2C","2D","3A","3B","3C","3D","4A","4B","4C","4D", "Ich bin Lehrer/in"]
                 $0.value = "Bitte auswählen"
                 $0.tag = "pmsClass"
                 $0.add(rule: RuleRequired())

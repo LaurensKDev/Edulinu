@@ -19,15 +19,24 @@ struct AppInfo {
 
 class AppInfoTableViewController: UITableViewController {
     
-    var appInfoRows = [
-        AppInfo(id: 0, title: "App-Version", text: "1.0"),
-    ]
+    
+    
+    var appInfoRows: [AppInfo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "App-Infos"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+        
+        appInfoRows.append(AppInfo(id: 0, title: "App-Version", text: appVersion!))
+        appInfoRows.append(AppInfo(id: 1, title: "Build-Nummer", text: build!))
+        appInfoRows.append(AppInfo(id: 1, title: "Entwickler", text: "Laurens K."))
+        
+        tableView.reloadData()
         
     }
 

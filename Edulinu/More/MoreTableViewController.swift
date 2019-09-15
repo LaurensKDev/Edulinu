@@ -151,6 +151,10 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
             
             bugReport()
             
+        } else if entry.onClickAction == "updateClass" {
+            
+            updateClass()
+            
         } else if entry.onClickAction == "resetApp" {
             
             resetApp()
@@ -187,6 +191,14 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
         
     }
     
+    func updateClass() {
+        
+        let storyboard = UIStoryboard(name: "UpdateClass", bundle: nil)
+        let updateClassFormViewController = storyboard.instantiateViewController(withIdentifier: "UpdateClassFormViewController") as! UINavigationController
+        self.present(updateClassFormViewController, animated: true, completion: nil)
+        
+    }
+    
     func resetApp() {
         
         let deleteAlert = UIAlertController(title: "Bist du sicher?", message: "Die Edulinu-App wird zurückgesetzt und kann dann neu eingerichtet werden.", preferredStyle: .alert)
@@ -197,6 +209,7 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
             edulinuLocalUserSettings.set("noLastName", forKey: Keys.ElusLastName)
             edulinuLocalUserSettings.set("noClass", forKey: Keys.ElusClass)
             edulinuLocalUserSettings.set(true, forKey: Keys.ElusHasAgreedToSentStatistics)
+            edulinuLocalUserSettings.set([""], forKey: Keys.ElusFavouriteTeachers)
 
             let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
             let splashWelcomeViewController = storyboard.instantiateViewController(withIdentifier: "SplashWelcomeViewController") as! SplashWelcomeViewController
@@ -223,7 +236,7 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
     
     func onClickActionNotAvailable() {
         
-        let alert = UIAlertController(title: "Fehler", message: "Ein unbekannter Fehler ist aufgetreten!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "App-Version veraltet", message: "Bitte aktualisiere die Edulinu-App im App Store, um diese Funktion nutzen zu können", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
