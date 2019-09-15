@@ -1,0 +1,66 @@
+
+/* Class = "UITabBarItem"; title = "My Edulinu"; ObjectID = "3UV-ch-SF7"; */
+"3UV-ch-SF7.title" = "My Edulinu";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "4d7-Zo-cc6"; */
+"4d7-Zo-cc6.text" = "Detail";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "52G-gw-lpU"; */
+"52G-gw-lpU.text" = "Title";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "6qA-oc-8P3"; */
+"6qA-oc-8P3.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "EmQ-rh-V72"; */
+"EmQ-rh-V72.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Edulinu-Apps"; ObjectID = "GZH-It-S0R"; */
+"GZH-It-S0R.title" = "Edulinu-Apps";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Ged-RK-czn"; */
+"Ged-RK-czn.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Gkw-Q0-pA3"; */
+"Gkw-Q0-pA3.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Mehr"; ObjectID = "Gou-22-CJ0"; */
+"Gou-22-CJ0.title" = "Mehr";
+
+/* Class = "UITabBarItem"; title = "Apps"; ObjectID = "GvC-6K-JAw"; */
+"GvC-6K-JAw.title" = "Apps";
+
+/* Class = "UINavigationItem"; title = "Mehr"; ObjectID = "H1F-Lz-24S"; */
+"H1F-Lz-24S.title" = "Mehr";
+
+/* Class = "UITextView"; text = "TextView"; ObjectID = "IC9-mj-hlv"; */
+"IC9-mj-hlv.text" = "TextView";
+
+/* Class = "UILabel"; text = "Willkommen,"; ObjectID = "KKC-3i-JPS"; */
+"KKC-3i-JPS.text" = "Willkommen,";
+
+/* Class = "UITabBarItem"; title = "Mails"; ObjectID = "NU9-aZ-zg1"; */
+"NU9-aZ-zg1.title" = "Mails";
+
+/* Class = "UINavigationItem"; title = "Edulinu Mails"; ObjectID = "bmt-up-rIz"; */
+"bmt-up-rIz.title" = "Edulinu Mails";
+
+/* Class = "UILabel"; text = "Laurens"; ObjectID = "hiV-ad-NaN"; */
+"hiV-ad-NaN.text" = "Laurens";
+
+/* Class = "UILabel"; text = "Diese Funktion ist noch nicht verfügbar."; ObjectID = "jLg-OA-bBL"; */
+"jLg-OA-bBL.text" = "Diese Funktion ist noch nicht verfügbar.";
+
+/* Class = "UITabBarItem"; title = "Lehrer"; ObjectID = "nqF-bM-gtN"; */
+"nqF-bM-gtN.title" = "Lehrer";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "pQH-VC-qC0"; */
+"pQH-VC-qC0.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "qhk-Pa-6qW"; */
+"qhk-Pa-6qW.text" = "Subtitle";
+
+/* Class = "UINavigationItem"; title = "Lehrer auswählen"; ObjectID = "rCP-bw-GUu"; */
+"rCP-bw-GUu.title" = "Lehrer auswählen";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "tdL-rT-3To"; */
+"tdL-rT-3To.text" = "Title";
