@@ -83,7 +83,7 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         if self.traitCollection.userInterfaceStyle == .dark {
                    view.backgroundColor = .black
