@@ -213,6 +213,7 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
 
             let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
             let splashWelcomeViewController = storyboard.instantiateViewController(withIdentifier: "SplashWelcomeViewController") as! SplashWelcomeViewController
+            splashWelcomeViewController.modalPresentationStyle = .fullScreen
             self.present(splashWelcomeViewController, animated: true, completion: nil)
 
         }))

@@ -34,6 +34,7 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
         let storyboard = UIStoryboard(name: "AddFavouriteTeacher", bundle: nil)
         let myEdAddFavouriteTeacherTableViewController = storyboard.instantiateViewController(withIdentifier: "MyEdAddFavouriteTeacherTableViewController") as! UINavigationController
+        myEdAddFavouriteTeacherTableViewController.modalPresentationStyle = .fullScreen
         self.present(myEdAddFavouriteTeacherTableViewController, animated: true, completion: nil)
         
     }
@@ -82,12 +83,18 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         self.teachers = self.matchTeachers(self.myEdTeachers, edulinuLocalUserSettings.array(forKey: Keys.ElusFavouriteTeachers) as! Array<String>)
         
         self.myEdTeacherTableView.reloadData()
         
+    }
+    
+    func reloadTeacherTableView() {
+        self.teachers = self.matchTeachers(self.myEdTeachers, edulinuLocalUserSettings.array(forKey: Keys.ElusFavouriteTeachers) as! Array<String>)
+        
+        self.myEdTeacherTableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

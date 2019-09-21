@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0D12937D232D7EF200936F40 /* UpdateClass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D12937C232D7EF200936F40 /* UpdateClass.storyboard */; };
 		0D12937F232D7F1800936F40 /* UpdateClassFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D12937E232D7F1800936F40 /* UpdateClassFormViewController.swift */; };
+		0D58AA1C233638D100DD7E7C /* ExtStringIsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */; };
+		0D58AA1E2336392D00DD7E7C /* ExtVCSlidePresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1D2336392D00DD7E7C /* ExtVCSlidePresent.swift */; };
+		0D58AA20233639A700DD7E7C /* ExtVCSlideDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */; };
 		0D5F095B23108496008CD288 /* TeacherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F095A23108496008CD288 /* TeacherTableViewController.swift */; };
 		0D5F095F23119269008CD288 /* MoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F095E23119269008CD288 /* MoreSection.swift */; };
 		0D5F09612311942C008CD288 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F09602311942C008CD288 /* MoreTableViewController.swift */; };
@@ -23,7 +26,7 @@
 		0DC1FA83232ACF3E00DF5A88 /* AppInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */; };
 		0DCDD017232CF27C00FD5CD9 /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD016232CF27C00FD5CD9 /* MaintenanceViewController.swift */; };
 		0DCDD019232CF68D00FD5CD9 /* Maintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD018232CF68D00FD5CD9 /* Maintenance.swift */; };
-		0DEFDCEE22E63346009D73CA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEFDCED22E63346009D73CA /* Extensions.swift */; };
+		0DEFDCEE22E63346009D73CA /* ExtStringIsAlphanumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEFDCED22E63346009D73CA /* ExtStringIsAlphanumeric.swift */; };
 		0DFAFC3F2310121D005D52EC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFAFC3E2310121D005D52EC /* App.swift */; };
 		0DFAFC422310139F005D52EC /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFAFC412310139F005D52EC /* Teacher.swift */; };
 		0DFAFC4823101866005D52EC /* AppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFAFC4723101866005D52EC /* AppsTableViewController.swift */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		0D12937C232D7EF200936F40 /* UpdateClass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateClass.storyboard; sourceTree = "<group>"; };
 		0D12937E232D7F1800936F40 /* UpdateClassFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateClassFormViewController.swift; sourceTree = "<group>"; };
+		0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtStringIsName.swift; sourceTree = "<group>"; };
+		0D58AA1D2336392D00DD7E7C /* ExtVCSlidePresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtVCSlidePresent.swift; sourceTree = "<group>"; };
+		0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtVCSlideDismiss.swift; sourceTree = "<group>"; };
 		0D5F095A23108496008CD288 /* TeacherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewController.swift; sourceTree = "<group>"; };
 		0D5F095E23119269008CD288 /* MoreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSection.swift; sourceTree = "<group>"; };
 		0D5F09602311942C008CD288 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +69,7 @@
 		0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoTableViewController.swift; sourceTree = "<group>"; };
 		0DCDD016232CF27C00FD5CD9 /* MaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
 		0DCDD018232CF68D00FD5CD9 /* Maintenance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maintenance.swift; sourceTree = "<group>"; };
-		0DEFDCED22E63346009D73CA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0DEFDCED22E63346009D73CA /* ExtStringIsAlphanumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtStringIsAlphanumeric.swift; sourceTree = "<group>"; };
 		0DFAFC3E2310121D005D52EC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		0DFAFC412310139F005D52EC /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		0DFAFC4723101866005D52EC /* AppsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsTableViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,17 @@
 			path = UpdateClass;
 			sourceTree = "<group>";
 		};
+		0D58AA1A2336388D00DD7E7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DEFDCED22E63346009D73CA /* ExtStringIsAlphanumeric.swift */,
+				0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */,
+				0D58AA1D2336392D00DD7E7C /* ExtVCSlidePresent.swift */,
+				0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0D5EE453232E94D4004C7DA9 /* Mail */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */,
-				0DEFDCED22E63346009D73CA /* Extensions.swift */,
 			);
 			path = Setup;
 			sourceTree = "<group>";
@@ -238,6 +254,7 @@
 				0DBEA9B922E3A0B300BE8DD5 /* Teacher */,
 				0DEFDCEC22E62E7E009D73CA /* Apps */,
 				0DACC3402322F76600B2B56A /* Setup */,
+				0D58AA1A2336388D00DD7E7C /* Extensions */,
 				33C3B866222DBD050063CDB1 /* AppDelegate.swift */,
 				33C3B86A222DBD050063CDB1 /* Main.storyboard */,
 				33D22731222FA5A100418F26 /* Assets.xcassets */,
@@ -397,6 +414,7 @@
 				33BB6475222DBFAB007247C8 /* MyEdulinuViewController.swift in Sources */,
 				0DCDD017232CF27C00FD5CD9 /* MaintenanceViewController.swift in Sources */,
 				33ACFF4122746C4700207C2E /* MailViewController.swift in Sources */,
+				0D58AA1E2336392D00DD7E7C /* ExtVCSlidePresent.swift in Sources */,
 				0D5F09612311942C008CD288 /* MoreTableViewController.swift in Sources */,
 				0DFAFC3F2310121D005D52EC /* App.swift in Sources */,
 				0DB10197232D2E05004FF249 /* SplashFormViewController.swift in Sources */,
@@ -409,8 +427,10 @@
 				0DCDD019232CF68D00FD5CD9 /* Maintenance.swift in Sources */,
 				0DFAFC422310139F005D52EC /* Teacher.swift in Sources */,
 				0D5F09632311CB2D008CD288 /* MoreEntry.swift in Sources */,
+				0D58AA1C233638D100DD7E7C /* ExtStringIsName.swift in Sources */,
+				0D58AA20233639A700DD7E7C /* ExtVCSlideDismiss.swift in Sources */,
 				33C3B867222DBD050063CDB1 /* AppDelegate.swift in Sources */,
-				0DEFDCEE22E63346009D73CA /* Extensions.swift in Sources */,
+				0DEFDCEE22E63346009D73CA /* ExtStringIsAlphanumeric.swift in Sources */,
 				0D12937F232D7F1800936F40 /* UpdateClassFormViewController.swift in Sources */,
 				0D5F095B23108496008CD288 /* TeacherTableViewController.swift in Sources */,
 			);
@@ -566,6 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3P942YG35Y;
 				INFOPLIST_FILE = Edulinu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,6 +606,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3P942YG35Y;
 				INFOPLIST_FILE = Edulinu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -47,7 +47,8 @@ class SplashFormViewController: FormViewController {
                 let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
                 let splashGetStartedViewController = storyboard.instantiateViewController(withIdentifier: "SplashGetStartedViewController") as! SplashGetStartedViewController
                 splashGetStartedViewController.modalTransitionStyle = .crossDissolve
-                self.present(splashGetStartedViewController, animated: true, completion: nil)
+                splashGetStartedViewController.modalPresentationStyle = .fullScreen
+                presentWithSlide(splashGetStartedViewController)
                 
             } else {
                 
@@ -68,6 +69,11 @@ class SplashFormViewController: FormViewController {
         
         self.title = "Über dich"
         self.navigationController?.navigationBar.prefersLargeTitles = false
+        
+        if #available(iOS 13, *) {
+            self.isModalInPresentation = false
+        }
+        
         
         form +++ Section("Persönlich")
             

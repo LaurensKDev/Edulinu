@@ -15,7 +15,8 @@ class SplashWelcomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
         let splashFormViewController = storyboard.instantiateViewController(withIdentifier: "SplashFormViewController") as! UINavigationController
         splashFormViewController.modalTransitionStyle = .crossDissolve
-        self.present(splashFormViewController, animated: true, completion: nil)
+        splashFormViewController.modalPresentationStyle = .fullScreen
+        presentWithSlide(splashFormViewController)
         
     }
     override func viewDidLoad() {
