@@ -9,15 +9,6 @@
 import UIKit
 import Firebase
 
-struct AppInfo {
-    
-    var id : Int
-    var title : String
-    var text : String
-    
-}
-
-
 class AppInfoTableViewController: UITableViewController {
     
     var appInfoDatabaseVersion: String = ""
@@ -26,10 +17,20 @@ class AppInfoTableViewController: UITableViewController {
     var appInfoDevelopmentTimeHours: Int = 0
     var appInfoDevelopmentTimeMinutes: Int = 0
     
-    var appInfoRows: [AppInfo] = []
-    
     let ref = Database.database().reference(withPath: "appInfo")
 
+    @IBOutlet weak var appVersionLabel: UILabel!
+    
+    @IBOutlet weak var appBuildLabel: UILabel!
+    
+    @IBOutlet weak var databaseVersionLabel: UILabel!
+    
+    @IBOutlet weak var databaseRootLabel: UILabel!
+    
+    @IBOutlet weak var developerLabel: UILabel!
+    
+    @IBOutlet weak var developmentTimeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,46 +48,16 @@ class AppInfoTableViewController: UITableViewController {
                 self.appInfoDevelopmentTimeHours = value["appInfoDevelopmentTimeHours"] as? Int ?? 0
                 self.appInfoDevelopmentTimeMinutes = value["appInfoDevelopmentTimeMinutes"] as? Int ?? 0
                 
-                self.appInfoRows = []
+                self.appVersionLabel.text? = appVersion ?? ""
+                self.appBuildLabel.text? = build ?? ""
+                self.databaseVersionLabel.text? = self.appInfoDatabaseVersion
+                self.databaseRootLabel.text? = self.appInfoDatabaseRoot
+                self.developerLabel.text? = self.appInfoDeveloper
+                self.developmentTimeLabel.text? = "\(self.appInfoDevelopmentTimeHours) h \(self.appInfoDevelopmentTimeMinutes) min"
                 
-                self.appInfoRows.append(AppInfo(id: 0, title: "App-Version", text: appVersion!))
-                self.appInfoRows.append(AppInfo(id: 1, title: "App-Build", text: build!))
-                self.appInfoRows.append(AppInfo(id: 1, title: "Datenbank-Version", text: self.appInfoDatabaseVersion))
-                self.appInfoRows.append(AppInfo(id: 1, title: "Datenbank-Root", text: self.appInfoDatabaseRoot))
-                self.appInfoRows.append(AppInfo(id: 1, title: "Entwickler", text: self.appInfoDeveloper))
-                self.appInfoRows.append(AppInfo(id: 1, title: "Entwicklungszeit", text: "\(self.appInfoDevelopmentTimeHours) h \(self.appInfoDevelopmentTimeMinutes) min"))
                 
-                self.tableView.reloadData()
                 
             }
         })
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return appInfoRows.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AppInfoCell", for: indexPath)
-        
-        let appInfoRow = appInfoRows[indexPath.row]
-        
-        cell.textLabel?.text = appInfoRow.title
-        cell.detailTextLabel?.text = appInfoRow.text
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-
 }
