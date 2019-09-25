@@ -73,12 +73,16 @@ class AppsTableViewController: UITableViewController {
         let app = apps[indexPath.row]
         
         
-        if let appURL = NSURL(string: "\(app.appScheme)://") {
+        if let appURL = URL(string: "\(app.appScheme)://") {
             let canOpen = UIApplication.shared.canOpenURL(appURL as URL)
             
             if canOpen == true {
                 
                 UIApplication.shared.open(appURL as URL, options: [:], completionHandler: nil)
+                
+            } else {
+                
+                UIApplication.shared.open(URL(string: app.appStoreLink)! as URL, options: [:], completionHandler: nil)
                 
             }
             
