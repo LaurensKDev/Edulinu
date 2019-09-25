@@ -72,7 +72,24 @@ class AppsTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let app = apps[indexPath.row]
         
-        UIApplication.shared.open(URL(string: app.appStoreLink)! as URL, options: [:], completionHandler: nil)
+        
+        if let appURL = NSURL(string: "\(app.appScheme)://") {
+            let canOpen = UIApplication.shared.canOpenURL(appURL as URL)
+            
+            if canOpen == true {
+                
+                UIApplication.shared.open(appURL as URL, options: [:], completionHandler: nil)
+                
+            }
+            
+            
+        } else {
+            
+            UIApplication.shared.open(URL(string: app.appStoreLink)! as URL, options: [:], completionHandler: nil)
+            
+        }
+        
+        
     }
     
 }

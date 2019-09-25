@@ -15,6 +15,10 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
     
     // MARK: Properties
     var teachers: [Teacher] = []
+    
+    var filteredTeachers = [Teacher]()
+    let searchController = UISearchController(searchResultsController: nil)
+    
     let ref = Database.database().reference(withPath: "teachers")
     
     override func viewDidLoad() {
@@ -38,6 +42,13 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
             self.tableView.reloadData()
         })
         
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Lehrer suchen"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,14 +57,25 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
     
     // MARK: UITableView Delegate methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //print(apps.count)
+        
+        if isFiltering() {
+          return filteredTeachers.count
+        }
+          
         return teachers.count
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeacherCell", for: indexPath)
         
-        let teacher = teachers[indexPath.row]
+        let teacher: Teacher
+        
+        if isFiltering() {
+            teacher = filteredTeachers[indexPath.row]
+        } else {
+            teacher = teachers[indexPath.row]
+        }
         
         cell.textLabel?.text = "\(teacher.firstName) \(teacher.lastName)"
         cell.detailTextLabel?.text = teacher.desc
@@ -71,7 +93,14 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //guard let cell = tableView.cellForRow(at: indexPath) else { return }
         tableView.deselectRow(at: indexPath, animated: true)
-        let teacher = teachers[indexPath.row]
+        
+        let teacher: Teacher
+        
+        if isFiltering() {
+            teacher = filteredTeachers[indexPath.row]
+        } else {
+            teacher = teachers[indexPath.row]
+        }
         
         showPortal(teacher.hasPortal, teacher.portalURL, teacher.firstName, teacher.lastName, teacher.gender)
     }
@@ -114,6 +143,26 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
             self.present(alert, animated: true)
             
         }
+    }
+    
+    // MARK: - Private instance methods
+      
+    func searchBarIsEmpty() -> Bool {
+      // Returns true if the text is empty or nil
+      return searchController.searchBar.text?.isEmpty ?? true
+    }
+      
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+      filteredTeachers = teachers.filter({( teacher : Teacher) -> Bool in
+        let teachername = "\(teacher.firstName) \(teacher.lastName)"
+        return teachername.lowercased().contains(searchText.lowercased())
+      })
+
+      tableView.reloadData()
+    }
+    
+    func isFiltering() -> Bool {
+      return searchController.isActive && !searchBarIsEmpty()
     }
     
 }

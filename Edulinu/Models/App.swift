@@ -13,15 +13,17 @@ struct App {
     
     let ref: DatabaseReference?
     let key: String
+    let appScheme: String
     let appStoreLink: String
     let desc: String
     let id: Int
     let imageURL: String
     let title: String
     
-    init(appStoreLink: String, desc: String, id: Int, imageURL: String, title: String, key: String = "") {
+    init(appScheme: String, appStoreLink: String, desc: String, id: Int, imageURL: String, title: String, key: String = "") {
         self.ref = nil
         self.key = key
+        self.appScheme = appScheme
         self.appStoreLink = appStoreLink
         self.desc = desc
         self.id = id
@@ -32,6 +34,7 @@ struct App {
     init?(snapshot: DataSnapshot) {
         guard
             let value = snapshot.value as? [String: AnyObject],
+            let appScheme = value["appScheme"] as? String,
             let appStoreLink = value["appStoreLink"] as? String,
             let desc = value["desc"] as? String,
             let id = value["id"] as? Int,
@@ -42,6 +45,7 @@ struct App {
         
         self.ref = snapshot.ref
         self.key = snapshot.key
+        self.appScheme = appScheme
         self.appStoreLink = appStoreLink
         self.desc = desc
         self.id = id
@@ -51,6 +55,7 @@ struct App {
     
     func toAnyObject() -> Any {
         return [
+            "appScheme": appScheme,
             "appStoreLink": appStoreLink,
             "desc": desc,
             "id": id,

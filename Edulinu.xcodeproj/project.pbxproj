@@ -24,6 +24,7 @@
 		0DACC33F2322F74B00B2B56A /* LocalUserSettingsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */; };
 		0DB10197232D2E05004FF249 /* SplashFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB10196232D2E05004FF249 /* SplashFormViewController.swift */; };
 		0DC1FA83232ACF3E00DF5A88 /* AppInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */; };
+		0DC6DD3323378DDB0094761A /* ExtUpdateSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC6DD3223378DDB0094761A /* ExtUpdateSearchResults.swift */; };
 		0DCDD017232CF27C00FD5CD9 /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD016232CF27C00FD5CD9 /* MaintenanceViewController.swift */; };
 		0DCDD019232CF68D00FD5CD9 /* Maintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD018232CF68D00FD5CD9 /* Maintenance.swift */; };
 		0DEFDCEE22E63346009D73CA /* ExtStringIsAlphanumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEFDCED22E63346009D73CA /* ExtStringIsAlphanumeric.swift */; };
@@ -67,6 +68,7 @@
 		0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserSettingsSetup.swift; sourceTree = "<group>"; };
 		0DB10196232D2E05004FF249 /* SplashFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFormViewController.swift; sourceTree = "<group>"; };
 		0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoTableViewController.swift; sourceTree = "<group>"; };
+		0DC6DD3223378DDB0094761A /* ExtUpdateSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUpdateSearchResults.swift; sourceTree = "<group>"; };
 		0DCDD016232CF27C00FD5CD9 /* MaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
 		0DCDD018232CF68D00FD5CD9 /* Maintenance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maintenance.swift; sourceTree = "<group>"; };
 		0DEFDCED22E63346009D73CA /* ExtStringIsAlphanumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtStringIsAlphanumeric.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */,
 				0D58AA1D2336392D00DD7E7C /* ExtVCSlidePresent.swift */,
 				0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */,
+				0DC6DD3223378DDB0094761A /* ExtUpdateSearchResults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				0D5F09632311CB2D008CD288 /* MoreEntry.swift in Sources */,
 				0D58AA1C233638D100DD7E7C /* ExtStringIsName.swift in Sources */,
 				0D58AA20233639A700DD7E7C /* ExtVCSlideDismiss.swift in Sources */,
+				0DC6DD3323378DDB0094761A /* ExtUpdateSearchResults.swift in Sources */,
 				33C3B867222DBD050063CDB1 /* AppDelegate.swift in Sources */,
 				0DEFDCEE22E63346009D73CA /* ExtStringIsAlphanumeric.swift in Sources */,
 				0D12937F232D7F1800936F40 /* UpdateClassFormViewController.swift in Sources */,
