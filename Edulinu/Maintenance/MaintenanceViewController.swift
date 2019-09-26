@@ -41,7 +41,10 @@ class MaintenanceViewController: UIViewController {
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let rootViewController = storyboard.instantiateViewController(withIdentifier: "RootViewController")
+                    rootViewController.modalPresentationStyle = .fullScreen
                     self.present(rootViewController, animated: false, completion: nil)
+                    
+                    
                     
                 }
                 
