@@ -67,6 +67,7 @@
 		0D98212F232D6455000E1048 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserSettingsSetup.swift; sourceTree = "<group>"; };
 		0DB10196232D2E05004FF249 /* SplashFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFormViewController.swift; sourceTree = "<group>"; };
+		0DC10A9C234B976600FCE49A /* Edulinu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Edulinu.entitlements; sourceTree = "<group>"; };
 		0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoTableViewController.swift; sourceTree = "<group>"; };
 		0DC6DD3223378DDB0094761A /* ExtUpdateSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUpdateSearchResults.swift; sourceTree = "<group>"; };
 		0DCDD016232CF27C00FD5CD9 /* MaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +247,7 @@
 		33C3B865222DBD050063CDB1 /* Edulinu */ = {
 			isa = PBXGroup;
 			children = (
+				0DC10A9C234B976600FCE49A /* Edulinu.entitlements */,
 				0D5EE453232E94D4004C7DA9 /* Mail */,
 				0D7E0908232E948F0092269E /* MyEdulinu */,
 				0D129380232D7F1D00936F40 /* UpdateClass */,
@@ -587,9 +589,11 @@
 			baseConfigurationReference = FB8BA62FAC0781B736BC327A /* Pods-Edulinu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Edulinu/Edulinu.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 199261001;
-				DEVELOPMENT_TEAM = 3P942YG35Y;
+				CURRENT_PROJECT_VERSION = 199261002;
+				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = Edulinu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -597,8 +601,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.Edulinu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.EdulinuApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -609,9 +614,11 @@
 			baseConfigurationReference = F5BA957E36DDFCEE98B91E2B /* Pods-Edulinu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Edulinu/Edulinu.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 199261001;
-				DEVELOPMENT_TEAM = 3P942YG35Y;
+				CURRENT_PROJECT_VERSION = 199261002;
+				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = Edulinu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -619,8 +626,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.Edulinu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.EdulinuApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
