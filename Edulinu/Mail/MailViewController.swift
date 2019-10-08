@@ -48,6 +48,7 @@ class MailViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let rootViewController = storyboard.instantiateViewController(withIdentifier: "RootViewController") as! UITabBarController
                 rootViewController.modalTransitionStyle = .crossDissolve
+                rootViewController.modalPresentationStyle = .fullScreen
                 self.present(rootViewController, animated: true, completion: nil)
                 
             }))
