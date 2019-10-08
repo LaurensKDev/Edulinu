@@ -29,16 +29,22 @@ class SplashGetStartedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if traitCollection.userInterfaceStyle == .dark {
+        welcomeMessageLabel.text = "Hallo, \(edulinuLocalUserSettings.string(forKey: Keys.ElusFirstName) ?? "No name")!"
+        
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        let userInterfaceStyle = traitCollection.userInterfaceStyle
+        
+        if userInterfaceStyle == .dark {
             self.view.backgroundColor = UIColor.black
             textField.textColor = UIColor.white
         } else {
             self.view.backgroundColor = UIColor.white
             textField.textColor = UIColor.black
         }
-        
-        welcomeMessageLabel.text = "Hallo, \(edulinuLocalUserSettings.string(forKey: Keys.ElusFirstName) ?? "No name")!"
-        
     }
     
 

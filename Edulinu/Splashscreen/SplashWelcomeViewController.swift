@@ -23,16 +23,22 @@ class SplashWelcomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        let userInterfaceStyle = traitCollection.userInterfaceStyle
         
-        if traitCollection.userInterfaceStyle == .dark {
+        if userInterfaceStyle == .dark {
             self.view.backgroundColor = UIColor.black
             textField.textColor = UIColor.white
         } else {
             self.view.backgroundColor = UIColor.white
             textField.textColor = UIColor.black
         }
-
-        // Do any additional setup after loading the view.
     }
 
 }

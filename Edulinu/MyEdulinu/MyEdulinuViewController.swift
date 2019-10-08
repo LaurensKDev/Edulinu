@@ -83,13 +83,20 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        let userInterfaceStyle = traitCollection.userInterfaceStyle
         
-        if self.traitCollection.userInterfaceStyle == .dark {
-                   view.backgroundColor = .black
-               } else {
-                   view.backgroundColor = .white
-               }
+        if userInterfaceStyle == .dark {
+            view.backgroundColor = .black
+        } else {
+            view.backgroundColor = .white
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
         self.teachers = self.matchTeachers(self.myEdTeachers, edulinuLocalUserSettings.array(forKey: Keys.ElusFavouriteTeachers) as! Array<String>)
         
