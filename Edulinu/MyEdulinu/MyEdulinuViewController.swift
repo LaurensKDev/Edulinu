@@ -98,6 +98,12 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         
+        if traitCollection.userInterfaceStyle == .dark {
+            view.backgroundColor = .black
+        } else {
+            view.backgroundColor = .white
+        }
+        
         self.teachers = self.matchTeachers(self.myEdTeachers, edulinuLocalUserSettings.array(forKey: Keys.ElusFavouriteTeachers) as! Array<String>)
         
         self.myEdTeacherTableView.reloadData()
