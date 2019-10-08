@@ -10,6 +10,7 @@ import UIKit
 
 class SplashGetStartedViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextView!
     
     @IBOutlet weak var welcomeMessageLabel: UILabel!
     
@@ -27,6 +28,14 @@ class SplashGetStartedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if traitCollection.userInterfaceStyle == .dark {
+            self.view.backgroundColor = UIColor.black
+            textField.textColor = UIColor.white
+        } else {
+            self.view.backgroundColor = UIColor.white
+            textField.textColor = UIColor.black
+        }
         
         welcomeMessageLabel.text = "Hallo, \(edulinuLocalUserSettings.string(forKey: Keys.ElusFirstName) ?? "No name")!"
         

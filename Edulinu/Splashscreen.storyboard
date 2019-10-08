@@ -69,6 +69,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dif-Du-S0N"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="lM5-19-yJG" id="PYY-re-0eb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fJ-TD-dEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,6 +160,7 @@
                         <viewLayoutGuide key="safeArea" id="q6D-Sw-Sa3"/>
                     </view>
                     <connections>
+                        <outlet property="textField" destination="x5o-C5-1bu" id="yvh-5d-FvC"/>
                         <outlet property="welcomeMessageLabel" destination="ifL-Qq-vRK" id="EdI-ah-Gx6"/>
                     </connections>
                 </viewController>

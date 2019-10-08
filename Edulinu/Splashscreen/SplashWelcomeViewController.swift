@@ -10,6 +10,8 @@ import UIKit
 
 class SplashWelcomeViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextView!
+    
     @IBAction func SplashToFormVC(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
@@ -21,6 +23,14 @@ class SplashWelcomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if traitCollection.userInterfaceStyle == .dark {
+            self.view.backgroundColor = UIColor.black
+            textField.textColor = UIColor.white
+        } else {
+            self.view.backgroundColor = UIColor.white
+            textField.textColor = UIColor.black
+        }
 
         // Do any additional setup after loading the view.
     }
