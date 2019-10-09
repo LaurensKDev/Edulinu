@@ -136,6 +136,7 @@ class MyEdAddFavouriteTeacherTableViewController: UITableViewController {
             
             edulinuLocalUserSettings.set(localFavouriteTeachers, forKey: Keys.ElusFavouriteTeachers)
             
+            self.searchController.dismiss(animated: false, completion: nil)
             self.dismiss(animated: true, completion: nil)
             
             
