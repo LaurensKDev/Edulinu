@@ -98,6 +98,10 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         
+        NotificationCenter.default.addObserver(self, selector: #selector(myEdReloadDayTime(_:)), name: Notification.Name(rawValue: "myEdReloadDayTime"), object: nil)
+        
+        dayTimeSetup()
+        
         if traitCollection.userInterfaceStyle == .dark {
             view.backgroundColor = .black
         } else {
@@ -108,6 +112,10 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
         self.myEdTeacherTableView.reloadData()
         
+    }
+    
+    @objc func myEdReloadDayTime(_ notification: Notification) {
+        dayTimeSetup()
     }
     
     func reloadTeacherTableView() {
@@ -214,7 +222,6 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         timer?.invalidate()
         
     }
-    
     
     @objc func dayTimeSetup() {
         

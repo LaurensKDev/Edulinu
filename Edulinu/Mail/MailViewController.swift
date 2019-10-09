@@ -28,7 +28,9 @@ class MailViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 
         self.view.addSubview(self.mailWebView)
         
-        if edulinuLocalUserSettings.string(forKey: Keys.ElusUserRole) == "student" {
+        let userRole = edulinuLocalUserSettings.string(forKey: Keys.ElusUserRole)
+        
+        if userRole == "student" || userRole == "teacher" {
             
             self.mailWebView.navigationDelegate = self
             let request = URLRequest(url: mailURL!)
@@ -42,7 +44,7 @@ class MailViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
             
         } else {
             
-            let alert = UIAlertController(title: "Nicht verfügbar", message: "Die Edulinu-Mails sind nur für Schüler verfügbar.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Nicht verfügbar", message: "Die Edulinu-Mails sind nur für Lehrer und Schüler verfügbar.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { action in
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)

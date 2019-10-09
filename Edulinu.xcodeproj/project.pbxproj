@@ -592,7 +592,7 @@
 				CODE_SIGN_ENTITLEMENTS = Edulinu/Edulinu.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1910091151;
+				CURRENT_PROJECT_VERSION = 1910091161;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = Edulinu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -600,7 +600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.EdulinuApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -617,7 +617,7 @@
 				CODE_SIGN_ENTITLEMENTS = Edulinu/Edulinu.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1910091151;
+				CURRENT_PROJECT_VERSION = 1910091161;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = Edulinu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -625,7 +625,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.EdulinuApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
