@@ -16,3 +16,11 @@ extension TeacherTableViewController: UISearchResultsUpdating {
   }
     
 }
+
+extension MyEdAddFavouriteTeacherTableViewController: UISearchResultsUpdating {
+    
+  func updateSearchResults(for searchController: UISearchController) {
+    filterContentForSearchText(searchController.searchBar.text!)
+  }
+    
+}
