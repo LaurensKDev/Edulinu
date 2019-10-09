@@ -12,6 +12,7 @@
 		0D58AA1C233638D100DD7E7C /* ExtStringIsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */; };
 		0D58AA1E2336392D00DD7E7C /* ExtVCSlidePresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1D2336392D00DD7E7C /* ExtVCSlidePresent.swift */; };
 		0D58AA20233639A700DD7E7C /* ExtVCSlideDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */; };
+		0D5E8002234DDAA7003BDD1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D5E8001234DDAA7003BDD1F /* GoogleService-Info.plist */; };
 		0D5F095B23108496008CD288 /* TeacherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F095A23108496008CD288 /* TeacherTableViewController.swift */; };
 		0D5F095F23119269008CD288 /* MoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F095E23119269008CD288 /* MoreSection.swift */; };
 		0D5F09612311942C008CD288 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F09602311942C008CD288 /* MoreTableViewController.swift */; };
@@ -36,7 +37,6 @@
 		0DFAFC4E23101B75005D52EC /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFAFC4D23101B75005D52EC /* FirebaseCoreDiagnostics.framework */; };
 		0DFAFC5023101B75005D52EC /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFAFC4F23101B75005D52EC /* FirebaseDatabase.framework */; };
 		0DFAFC5223101B75005D52EC /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFAFC5123101B75005D52EC /* FirebaseFirestore.framework */; };
-		0DFBC05D230B00CF0005EB32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DFBC05C230B00CF0005EB32 /* GoogleService-Info.plist */; };
 		33ACFF4122746C4700207C2E /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACFF4022746C4700207C2E /* MailViewController.swift */; };
 		33BB6475222DBFAB007247C8 /* MyEdulinuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3B868222DBD050063CDB1 /* MyEdulinuViewController.swift */; };
 		33BCBE8022732A4E00561EDC /* SplashGetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BCBE7F22732A4E00561EDC /* SplashGetStartedViewController.swift */; };
@@ -54,6 +54,7 @@
 		0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtStringIsName.swift; sourceTree = "<group>"; };
 		0D58AA1D2336392D00DD7E7C /* ExtVCSlidePresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtVCSlidePresent.swift; sourceTree = "<group>"; };
 		0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtVCSlideDismiss.swift; sourceTree = "<group>"; };
+		0D5E8001234DDAA7003BDD1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D5F095A23108496008CD288 /* TeacherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewController.swift; sourceTree = "<group>"; };
 		0D5F095E23119269008CD288 /* MoreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSection.swift; sourceTree = "<group>"; };
 		0D5F09602311942C008CD288 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		0DFAFC4D23101B75005D52EC /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFAFC4F23101B75005D52EC /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFAFC5123101B75005D52EC /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DFBC05C230B00CF0005EB32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		33ACFF4022746C4700207C2E /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		33BCBE7F22732A4E00561EDC /* SplashGetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashGetStartedViewController.swift; sourceTree = "<group>"; };
 		33C3B863222DBD050063CDB1 /* Edulinu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edulinu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,7 +265,7 @@
 				33D22731222FA5A100418F26 /* Assets.xcassets */,
 				33C3B86F222DBD070063CDB1 /* LaunchScreen.storyboard */,
 				33C3B872222DBD070063CDB1 /* Info.plist */,
-				0DFBC05C230B00CF0005EB32 /* GoogleService-Info.plist */,
+				0D5E8001234DDAA7003BDD1F /* GoogleService-Info.plist */,
 			);
 			path = Edulinu;
 			sourceTree = "<group>";
@@ -356,9 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D98212D232D3745000E1048 /* Maintenance.storyboard in Resources */,
+				0D5E8002234DDAA7003BDD1F /* GoogleService-Info.plist in Resources */,
 				33C3B871222DBD070063CDB1 /* LaunchScreen.storyboard in Resources */,
 				0D7E0905232E867D0092269E /* AddFavouriteTeacher.storyboard in Resources */,
-				0DFBC05D230B00CF0005EB32 /* GoogleService-Info.plist in Resources */,
 				33D22732222FA5A100418F26 /* Assets.xcassets in Resources */,
 				33C3B86C222DBD050063CDB1 /* Main.storyboard in Resources */,
 				0D98212B232D36F4000E1048 /* Splashscreen.storyboard in Resources */,
