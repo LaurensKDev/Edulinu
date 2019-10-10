@@ -38,8 +38,6 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    var timer: Timer?
-    
     // MARK: Properties
     var myEdTeachers: [Teacher] = []
     let ref = Database.database().reference(withPath: "teachers")
@@ -48,8 +46,6 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         
         dayTimeSetup()
-        
-        timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.dayTimeSetup), userInfo: nil, repeats: true)
         
         if edulinuLocalUserSettings.string(forKey: Keys.ElusUserRole) == "student" {
             myEdTeacherNavigationBar.topItem?.title = "Deine Lehrer"
@@ -236,13 +232,6 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
             self.present(alert, animated: true)
             
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        super.viewWillDisappear(animated)
-        timer?.invalidate()
-        
     }
     
     @objc func dayTimeSetup() {
