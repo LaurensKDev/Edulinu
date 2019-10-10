@@ -34,7 +34,7 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
         let storyboard = UIStoryboard(name: "AddFavouriteTeacher", bundle: nil)
         let myEdAddFavouriteTeacherTableViewController = storyboard.instantiateViewController(withIdentifier: "MyEdAddFavouriteTeacherTableViewController") as! UINavigationController
-        myEdAddFavouriteTeacherTableViewController.modalPresentationStyle = .fullScreen
+        //myEdAddFavouriteTeacherTableViewController.modalPresentationStyle = .fullScreen
         self.present(myEdAddFavouriteTeacherTableViewController, animated: true, completion: nil)
         
     }
@@ -100,6 +100,8 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
         NotificationCenter.default.addObserver(self, selector: #selector(myEdReloadDayTime(_:)), name: Notification.Name(rawValue: "myEdReloadDayTime"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(myEdAddedTeacher), name: Notification.Name(rawValue: "myEdAddedTeacher"), object: nil)
+        
         dayTimeSetup()
         
         if traitCollection.userInterfaceStyle == .dark {
@@ -116,6 +118,14 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
     
     @objc func myEdReloadDayTime(_ notification: Notification) {
         dayTimeSetup()
+    }
+    
+    @objc func myEdAddedTeacher(_ notification: Notification) {
+        
+        self.teachers = self.matchTeachers(self.myEdTeachers, edulinuLocalUserSettings.array(forKey: Keys.ElusFavouriteTeachers) as! Array<String>)
+        
+        self.myEdTeacherTableView.reloadData()
+        
     }
     
     func reloadTeacherTableView() {

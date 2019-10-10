@@ -82,6 +82,11 @@ class SplashFormViewController: FormViewController {
                 row.placeholder = "Maximilian"
                 row.tag = "firstName"
                 row.add(rule: RuleRequired())
+            } .cellUpdate { cell, row in
+                if self.traitCollection.userInterfaceStyle == .dark {
+                    cell.titleLabel?.textColor = .white
+                    cell.textField?.textColor = .white
+                }
             }
             
             <<< NameRow(){ row in
@@ -89,6 +94,12 @@ class SplashFormViewController: FormViewController {
                 row.placeholder = "Mustermann"
                 row.tag = "lastName"
                 row.add(rule: RuleRequired())
+            } .cellUpdate { cell, row in
+                if self.traitCollection.userInterfaceStyle == .dark {
+                    cell.titleLabel?.textColor = .white
+                    cell.textField?.textColor = .white
+                    
+                }
             }
             
             +++ Section("Schule")
@@ -99,6 +110,11 @@ class SplashFormViewController: FormViewController {
                 $0.value = "Bitte auswählen"
                 $0.tag = "pmsClass"
                 $0.add(rule: RuleRequired())
+            } .cellUpdate { cell, row in
+                if self.traitCollection.userInterfaceStyle == .dark {
+                    cell.textLabel!.textColor = .white
+                }
+                
         }
     }
 }
