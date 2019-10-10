@@ -137,7 +137,23 @@ class MyEdAddFavouriteTeacherTableViewController: UITableViewController {
             
             let alert = UIAlertController(title: "Kein Portal", message: "\(genderInText) \(lastName) hat kein Portal.", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: nil))
+            
+            alert.addAction(UIAlertAction(title: "Trotzdem hinzufügen", style: .default, handler: { action in
+                
+                var localFavouriteTeachers = edulinuLocalUserSettings.array(forKey: Keys.ElusFavouriteTeachers)
+                
+                localFavouriteTeachers?.append(teacherShort)
+                
+                edulinuLocalUserSettings.set(localFavouriteTeachers, forKey: Keys.ElusFavouriteTeachers)
+                
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "myEdAddedTeacher"), object: nil)
+                
+                self.searchController.dismiss(animated: false, completion: nil)
+                
+                self.dismiss(animated: true, completion: nil)
+                
+            }))
             
             self.present(alert, animated: true)
             
