@@ -167,6 +167,10 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
             
             openMail(entry.URL)
             
+        } else if entry.onClickAction == "openSettings" {
+        
+            openSettings()
+            
         } else {
             
             onClickActionNotAvailable()
@@ -232,6 +236,12 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
     func openMail(_ mailString: String) {
         
         UIApplication.shared.open(URL(string: mailString)! as URL, options: [:], completionHandler: nil)
+        
+    }
+    
+    func openSettings() {
+        
+        performSegue(withIdentifier: "openSettings", sender: self)
         
     }
     

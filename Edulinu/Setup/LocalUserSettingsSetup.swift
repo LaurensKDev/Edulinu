@@ -22,8 +22,13 @@ struct Keys {
     static let ElusHasAgreedToSentStatistics = "ElusHasAgreedToSentStatistics"
     static let ElusFavouriteTeachers = "ElusFavouriteTeachers"
     
-    // Teacher-Table
-    static let ElusTeacherTableShowTeacherShort = "ElusTeacherTableShowTeacherShort"
+    // Settings
+    
+    // Section: My Edulinu
+    static let ElusSettingsMyEdShowTeacherShort = "ElusSettingsMyEdShowTeacherShort"
+    
+    // Section: Lehrer
+    static let ElusSettingsTeacherTableShowTeacherShort = "ElusSettingsTeacherTableShowTeacherShort"
 }
 
 //edulinuLocalUserSettings.bool(forKey: Keys.ElusDidSplash)

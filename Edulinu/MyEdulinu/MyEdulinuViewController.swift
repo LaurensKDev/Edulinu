@@ -146,7 +146,7 @@ class MyEdulinuViewController: UIViewController, UITableViewDataSource, UITableV
         
         cell.textLabel?.text = "\(teacher.firstName) \(teacher.lastName)"
         
-        if edulinuLocalUserSettings.bool(forKey: Keys.ElusTeacherTableShowTeacherShort) {
+        if edulinuLocalUserSettings.bool(forKey: Keys.ElusSettingsMyEdShowTeacherShort) {
             
             if teacher.desc.isEmpty {
                 cell.detailTextLabel?.text = "\(teacher.teacherShort.uppercased())"

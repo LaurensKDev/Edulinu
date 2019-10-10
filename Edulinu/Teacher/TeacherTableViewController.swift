@@ -21,15 +21,6 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
     
     let ref = Database.database().reference(withPath: "teachers")
     
-    
-    @IBAction func openSettingsButton(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "TeacherSettings", bundle: nil)
-        let teacherSettingsViewController = storyboard.instantiateViewController(withIdentifier: "TeacherSettingsTableViewController") as! UINavigationController
-        self.present(teacherSettingsViewController, animated: true, completion: nil)
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,12 +53,8 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
     
     override func viewWillAppear(_ animated: Bool) {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(teacherTableSettingsUpdated(_:)), name: Notification.Name(rawValue: "teacherTableSettingsUpdated"), object: nil)
-        
-    }
-    
-    @objc func teacherTableSettingsUpdated(_ notification: Notification) {
         self.tableView.reloadData()
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -98,7 +85,7 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
         
         cell.textLabel?.text = "\(teacher.firstName) \(teacher.lastName)"
         
-        if edulinuLocalUserSettings.bool(forKey: Keys.ElusTeacherTableShowTeacherShort) {
+        if edulinuLocalUserSettings.bool(forKey: Keys.ElusSettingsTeacherTableShowTeacherShort) {
             
             if teacher.desc.isEmpty {
                 cell.detailTextLabel?.text = "\(teacher.teacherShort.uppercased())"

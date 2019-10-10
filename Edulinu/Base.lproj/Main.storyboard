@@ -176,6 +176,7 @@
                     <navigationItem key="navigationItem" title="Mehr" id="H1F-Lz-24S"/>
                     <connections>
                         <segue destination="NIR-PI-Tky" kind="show" identifier="appInfo" id="azG-ab-ubo"/>
+                        <segue destination="Jgz-Jg-Q6U" kind="show" identifier="openSettings" id="W1a-NT-NMp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpq-CH-yAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -409,13 +410,7 @@
                             <outlet property="delegate" destination="8Bx-lG-ZeT" id="O4G-vr-7SN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lehrer auswählen" id="rCP-bw-GUu">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="sgf-GG-lLK">
-                            <connections>
-                                <action selector="openSettingsButton:" destination="8Bx-lG-ZeT" id="c3B-sj-Oae"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Lehrer auswählen" id="rCP-bw-GUu"/>
                     <connections>
                         <segue destination="Vqd-Ab-NG9" kind="presentation" identifier="openPortalseiten" modalTransitionStyle="crossDissolve" id="Nhe-ER-6BF"/>
                     </connections>
@@ -610,12 +605,104 @@
             </objects>
             <point key="canvasLocation" x="2889" y="982"/>
         </scene>
+        <!--Settings Table View Controller-->
+        <scene sceneID="itB-PO-ept">
+            <objects>
+                <tableViewController id="Jgz-Jg-Q6U" customClass="SettingsTableViewController" customModule="Edulinu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fix-5w-8Kc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="My Edulinu" footerTitle="Lege fest, ob alle Lehrerkürzel in der My Edulinu-Ansicht gezeigt werden sollen." id="Ejd-9d-ehf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gM7-CY-s0d">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gM7-CY-s0d" id="9b3-ct-qOh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q3C-W5-CHL">
+                                                    <rect key="frame" x="310" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="myEdShowTeacherShortSwitchToggled:" destination="Jgz-Jg-Q6U" eventType="valueChanged" id="gH0-CB-G9X"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lehrerkürzel anzeigen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph0-9K-uMb">
+                                                    <rect key="frame" x="16" y="11.666666666666664" width="169" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ph0-9K-uMb" firstAttribute="centerY" secondItem="q3C-W5-CHL" secondAttribute="centerY" id="1S7-FV-tda"/>
+                                                <constraint firstItem="ph0-9K-uMb" firstAttribute="leading" secondItem="9b3-ct-qOh" secondAttribute="leadingMargin" id="2C6-XX-WV2"/>
+                                                <constraint firstItem="q3C-W5-CHL" firstAttribute="trailing" secondItem="9b3-ct-qOh" secondAttribute="trailingMargin" id="X8H-hr-NyG"/>
+                                                <constraint firstItem="q3C-W5-CHL" firstAttribute="centerY" secondItem="9b3-ct-qOh" secondAttribute="centerY" id="e3u-yg-hUE"/>
+                                                <constraint firstItem="q3C-W5-CHL" firstAttribute="top" secondItem="9b3-ct-qOh" secondAttribute="topMargin" constant="-5" id="nOj-hW-xWE"/>
+                                                <constraint firstItem="ph0-9K-uMb" firstAttribute="top" secondItem="9b3-ct-qOh" secondAttribute="topMargin" constant="0.6666666666666643" id="pZx-Km-YMp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Lehrer" footerTitle="Lege fest, ob alle Lehrerkürzel in der Lehrer-Ansicht gezeigt werden sollen." id="ogh-nj-gNE">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GoV-J7-529">
+                                        <rect key="frame" x="0.0" y="190.16666412353516" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GoV-J7-529" id="AZC-yT-WfC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XkJ-9c-9Wh">
+                                                    <rect key="frame" x="310" y="6.6666666666666679" width="51" height="31.000000000000004"/>
+                                                    <connections>
+                                                        <action selector="teacherShowTeacherShortSwitchToggled:" destination="Jgz-Jg-Q6U" eventType="valueChanged" id="sBq-v9-fZB"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lehrerkürzel anzeigen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekK-Pc-g50">
+                                                    <rect key="frame" x="16" y="11" width="169" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ekK-Pc-g50" firstAttribute="centerY" secondItem="AZC-yT-WfC" secondAttribute="centerY" id="BiZ-fl-c09"/>
+                                                <constraint firstItem="ekK-Pc-g50" firstAttribute="top" secondItem="AZC-yT-WfC" secondAttribute="topMargin" id="Gbf-yI-Sx9"/>
+                                                <constraint firstItem="XkJ-9c-9Wh" firstAttribute="centerY" secondItem="ekK-Pc-g50" secondAttribute="centerY" id="Vb3-2z-znI"/>
+                                                <constraint firstItem="XkJ-9c-9Wh" firstAttribute="trailing" secondItem="AZC-yT-WfC" secondAttribute="trailingMargin" id="Vbl-bE-2yy"/>
+                                                <constraint firstItem="ekK-Pc-g50" firstAttribute="leading" secondItem="AZC-yT-WfC" secondAttribute="leadingMargin" id="YBB-Km-O0M"/>
+                                                <constraint firstItem="XkJ-9c-9Wh" firstAttribute="top" secondItem="AZC-yT-WfC" secondAttribute="topMargin" constant="-4.3333333333333321" id="cG2-ZY-OF7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Jgz-Jg-Q6U" id="fJZ-nc-tA5"/>
+                            <outlet property="delegate" destination="Jgz-Jg-Q6U" id="keA-22-Mfs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="lPv-4Y-ql5"/>
+                    <connections>
+                        <outlet property="myEdShowTeacherShortSwitch" destination="q3C-W5-CHL" id="dZa-9f-Qqn"/>
+                        <outlet property="teacherShowTeacherShortSwitch" destination="XkJ-9c-9Wh" id="K1y-DB-l8O"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RK0-hJ-s5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550" y="1618"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Linu_liest" width="1000" height="1000"/>
         <image name="app.badge.fill" catalog="system" width="64" height="58"/>
         <image name="ellipsis.circle" catalog="system" width="64" height="62"/>
-        <image name="gear" catalog="system" width="64" height="60"/>
         <image name="heart.circle.fill" catalog="system" width="64" height="62"/>
         <image name="moon" width="619" height="604"/>
         <image name="person.2.fill" catalog="system" width="64" height="40"/>
