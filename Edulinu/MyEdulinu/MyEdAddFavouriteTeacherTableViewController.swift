@@ -81,7 +81,20 @@ class MyEdAddFavouriteTeacherTableViewController: UITableViewController {
         }
         
         cell.textLabel?.text = "\(teacher.firstName) \(teacher.lastName)"
-        cell.detailTextLabel?.text = teacher.desc
+        
+        if edulinuLocalUserSettings.bool(forKey: Keys.ElusTeacherTableShowTeacherShort) {
+            
+            if teacher.desc.isEmpty {
+                cell.detailTextLabel?.text = "\(teacher.teacherShort.uppercased())"
+            } else {
+                cell.detailTextLabel?.text = "\(teacher.teacherShort.uppercased()) - \(teacher.desc)"
+            }
+            
+        } else {
+            
+            cell.detailTextLabel?.text = "\(teacher.desc)"
+            
+        }
         
         cell.imageView?.sd_setImage(with: URL(string: teacher.imageURL), placeholderImage: UIImage(named: "loading214x322_white"), options: [])
         //cell.imageView?.sd_imageIndicator = SDWebImageActivityIndicator.gray

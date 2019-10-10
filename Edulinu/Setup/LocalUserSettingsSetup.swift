@@ -11,6 +11,8 @@ import Foundation
 let edulinuLocalUserSettings = UserDefaults.standard
 
 struct Keys {
+    
+    // General
     static let ElusDidSplash = "ElusDidSplash"
     static let ElusFirstName = "ElusFirstName"
     static let ElusLastName = "ElusLastName"
@@ -19,6 +21,9 @@ struct Keys {
     static let ElusClassLastUpdateDate = "ElusClassLastUpdateDate"
     static let ElusHasAgreedToSentStatistics = "ElusHasAgreedToSentStatistics"
     static let ElusFavouriteTeachers = "ElusFavouriteTeachers"
+    
+    // Teacher-Table
+    static let ElusTeacherTableShowTeacherShort = "ElusTeacherTableShowTeacherShort"
 }
 
 //edulinuLocalUserSettings.bool(forKey: Keys.ElusDidSplash)
