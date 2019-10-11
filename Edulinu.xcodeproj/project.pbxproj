@@ -22,6 +22,7 @@
 		0D982129232D2FB7000E1048 /* SplashWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D982128232D2FB7000E1048 /* SplashWelcomeViewController.swift */; };
 		0D98212B232D36F4000E1048 /* Splashscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D98212A232D36F4000E1048 /* Splashscreen.storyboard */; };
 		0D98212D232D3745000E1048 /* Maintenance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D98212C232D3745000E1048 /* Maintenance.storyboard */; };
+		0D9E37B123504C6700045C77 /* ExtElusResetUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E37B023504C6700045C77 /* ExtElusResetUserDefaults.swift */; };
 		0DACC33F2322F74B00B2B56A /* LocalUserSettingsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */; };
 		0DB10197232D2E05004FF249 /* SplashFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB10196232D2E05004FF249 /* SplashFormViewController.swift */; };
 		0DC1FA83232ACF3E00DF5A88 /* AppInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */; };
@@ -67,6 +68,7 @@
 		0D98212C232D3745000E1048 /* Maintenance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Maintenance.storyboard; path = Edulinu/Maintenance.storyboard; sourceTree = SOURCE_ROOT; };
 		0D98212E232D6455000E1048 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		0D98212F232D6455000E1048 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0D9E37B023504C6700045C77 /* ExtElusResetUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtElusResetUserDefaults.swift; sourceTree = "<group>"; };
 		0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserSettingsSetup.swift; sourceTree = "<group>"; };
 		0DB10196232D2E05004FF249 /* SplashFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFormViewController.swift; sourceTree = "<group>"; };
 		0DC10A9C234B976600FCE49A /* Edulinu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Edulinu.entitlements; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				0D58AA1D2336392D00DD7E7C /* ExtVCSlidePresent.swift */,
 				0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */,
 				0DC6DD3223378DDB0094761A /* ExtUpdateSearchResults.swift */,
+				0D9E37B023504C6700045C77 /* ExtElusResetUserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				33BB6475222DBFAB007247C8 /* MyEdulinuViewController.swift in Sources */,
 				0DCDD017232CF27C00FD5CD9 /* MaintenanceViewController.swift in Sources */,
 				33ACFF4122746C4700207C2E /* MailViewController.swift in Sources */,
+				0D9E37B123504C6700045C77 /* ExtElusResetUserDefaults.swift in Sources */,
 				0D58AA1E2336392D00DD7E7C /* ExtVCSlidePresent.swift in Sources */,
 				0D5F09612311942C008CD288 /* MoreTableViewController.swift in Sources */,
 				0DFAFC3F2310121D005D52EC /* App.swift in Sources */,

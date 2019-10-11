@@ -208,12 +208,7 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
         let deleteAlert = UIAlertController(title: "Bist du sicher?", message: "Die Edulinu-App wird zurückgesetzt und kann dann neu eingerichtet werden.", preferredStyle: .alert)
         deleteAlert.addAction(UIAlertAction(title: "App zurücksetzen", style: .destructive, handler: { action in
 
-            edulinuLocalUserSettings.set(false, forKey: Keys.ElusDidSplash)
-            edulinuLocalUserSettings.set("noFirstName", forKey: Keys.ElusFirstName)
-            edulinuLocalUserSettings.set("noLastName", forKey: Keys.ElusLastName)
-            edulinuLocalUserSettings.set("noClass", forKey: Keys.ElusClass)
-            edulinuLocalUserSettings.set(true, forKey: Keys.ElusHasAgreedToSentStatistics)
-            edulinuLocalUserSettings.set([""], forKey: Keys.ElusFavouriteTeachers)
+            self.elusResetUserDefaults()
 
             let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
             let splashWelcomeViewController = storyboard.instantiateViewController(withIdentifier: "SplashWelcomeViewController") as! SplashWelcomeViewController
