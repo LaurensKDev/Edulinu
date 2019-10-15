@@ -24,7 +24,6 @@ class TeacherTableViewController: UITableViewController, SFSafariViewControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Lehrer auswählen"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.tableView.rowHeight = 80
         

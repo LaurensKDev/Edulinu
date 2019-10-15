@@ -82,7 +82,7 @@ class MyEdAddFavouriteTeacherTableViewController: UITableViewController {
         
         cell.textLabel?.text = "\(teacher.firstName) \(teacher.lastName)"
         
-        if edulinuLocalUserSettings.bool(forKey: Keys.ElusSettingsTeacherTableShowTeacherShort) {
+        if edulinuLocalUserSettings.bool(forKey: Keys.ElusSettingsMyEdShowTeacherShort) {
             
             if teacher.desc.isEmpty {
                 cell.detailTextLabel?.text = "\(teacher.teacherShort.uppercased())"
