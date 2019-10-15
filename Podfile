@@ -11,5 +11,11 @@ target 'Edulinu' do
   pod 'Firebase/Database'
   pod 'SDWebImage'
   pod 'Eureka'
+  pod 'OneSignal', '>= 2.6.2', '< 3.0'
 
+end
+
+target 'OneSignalNotificationServiceExtension' do
+  use_frameworks!
+  pod 'OneSignal', '>= 2.6.2', '< 3.0'
 end
