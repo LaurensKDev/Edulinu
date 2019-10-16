@@ -10,11 +10,7 @@ import UIKit
 
 class NewsDetailViewController: UIViewController {
     
-    var newsEntry: News? {
-        didSet {
-            print(newsEntry?.title)
-        }
-    }
+    var newsEntry: News?
 
     @IBOutlet weak var newsTitleLabel: UILabel!
     @IBOutlet weak var newsAutherLabel: UILabel!

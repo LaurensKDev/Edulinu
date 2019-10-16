@@ -45,7 +45,7 @@ class SplashFormViewController: FormViewController {
                 edulinuLocalUserSettings.set([""], forKey: Keys.ElusFavouriteTeachers)
                 
                 let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
-                let splashGetStartedViewController = storyboard.instantiateViewController(withIdentifier: "SplashGetStartedViewController") as! SplashGetStartedViewController
+                let splashGetStartedViewController = storyboard.instantiateViewController(withIdentifier: "SplashNotificationsViewController") as! SplashNotificationsViewController
                 splashGetStartedViewController.modalTransitionStyle = .crossDissolve
                 splashGetStartedViewController.modalPresentationStyle = .fullScreen
                 presentWithSlide(splashGetStartedViewController)

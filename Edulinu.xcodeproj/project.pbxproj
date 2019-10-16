@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D12937D232D7EF200936F40 /* UpdateClass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D12937C232D7EF200936F40 /* UpdateClass.storyboard */; };
 		0D12937F232D7F1800936F40 /* UpdateClassFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D12937E232D7F1800936F40 /* UpdateClassFormViewController.swift */; };
+		0D39C2332357706E00405E6B /* SplashNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39C2322357706E00405E6B /* SplashNotificationsViewController.swift */; };
 		0D574614235641F5001283A7 /* NewsNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D574613235641F5001283A7 /* NewsNotification.storyboard */; };
 		0D57461623564205001283A7 /* NewsNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D57461523564205001283A7 /* NewsNotificationViewController.swift */; };
 		0D58AA1C233638D100DD7E7C /* ExtStringIsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */; };
@@ -87,6 +88,7 @@
 /* Begin PBXFileReference section */
 		0D12937C232D7EF200936F40 /* UpdateClass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateClass.storyboard; sourceTree = "<group>"; };
 		0D12937E232D7F1800936F40 /* UpdateClassFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateClassFormViewController.swift; sourceTree = "<group>"; };
+		0D39C2322357706E00405E6B /* SplashNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashNotificationsViewController.swift; sourceTree = "<group>"; };
 		0D574613235641F5001283A7 /* NewsNotification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsNotification.storyboard; sourceTree = "<group>"; };
 		0D57461523564205001283A7 /* NewsNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNotificationViewController.swift; sourceTree = "<group>"; };
 		0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtStringIsName.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				0D98212A232D36F4000E1048 /* Splashscreen.storyboard */,
 				0D982128232D2FB7000E1048 /* SplashWelcomeViewController.swift */,
 				0DB10196232D2E05004FF249 /* SplashFormViewController.swift */,
+				0D39C2322357706E00405E6B /* SplashNotificationsViewController.swift */,
 				33BCBE7F22732A4E00561EDC /* SplashGetStartedViewController.swift */,
 			);
 			path = Splashscreen;
@@ -600,6 +603,7 @@
 				0DCDD019232CF68D00FD5CD9 /* Maintenance.swift in Sources */,
 				0DFAFC422310139F005D52EC /* Teacher.swift in Sources */,
 				0D5F09632311CB2D008CD288 /* MoreEntry.swift in Sources */,
+				0D39C2332357706E00405E6B /* SplashNotificationsViewController.swift in Sources */,
 				0D58AA1C233638D100DD7E7C /* ExtStringIsName.swift in Sources */,
 				0DA424F82355ED0E007FE1B4 /* News.swift in Sources */,
 				0D58AA20233639A700DD7E7C /* ExtVCSlideDismiss.swift in Sources */,
@@ -651,7 +655,7 @@
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1170003;
+				CURRENT_PROJECT_VERSION = 1170004;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -676,7 +680,7 @@
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1170003;
+				CURRENT_PROJECT_VERSION = 1170004;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;

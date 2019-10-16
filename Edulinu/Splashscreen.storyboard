@@ -166,7 +166,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wnl-3K-5lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3073" y="-1368"/>
+            <point key="canvasLocation" x="3838" y="-1368"/>
+        </scene>
+        <!--Splash Notifications View Controller-->
+        <scene sceneID="Ldk-qT-fF4">
+            <objects>
+                <viewController storyboardIdentifier="SplashNotificationsViewController" id="mcn-4r-0te" customClass="SplashNotificationsViewController" customModule="Edulinu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wcZ-2t-RKy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Darf ich mich melden?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-Yd-IXg">
+                                <rect key="frame" x="44" y="262" width="287" height="39"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linu_liest_Badge" translatesAutoresizingMaskIntoConstraints="NO" id="oxS-Rf-Ibg">
+                                <rect key="frame" x="137.66666666666666" y="169" width="100" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="04D-C7-lFj"/>
+                                    <constraint firstAttribute="height" constant="85" id="bBy-mo-7nb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erlaube Push-Benachrichtigungen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4L-du-9bl">
+                                <rect key="frame" x="56" y="394" width="263.33333333333331" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-3a-hf3">
+                                <rect key="frame" x="67.666666666666686" y="426" width="240" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="A1u-Bl-7fR"/>
+                                    <constraint firstAttribute="width" constant="240" id="onU-5Q-RqR"/>
+                                </constraints>
+                                <string key="text">Wenn du mir erlaubst, dir ab und zu Benachrichtigungen zu senden, kann ich dich an wichtige Ereignisse erinnern. Es wäre mir eine Ehre!</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qN-W1-KFG">
+                                <rect key="frame" x="161.66666666666666" y="742" width="52" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Weiter"/>
+                                <connections>
+                                    <action selector="askForPushPermissionButton:" destination="mcn-4r-0te" eventType="touchUpInside" id="QaP-Gn-h7x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qpf-3a-hf3" firstAttribute="centerX" secondItem="wcZ-2t-RKy" secondAttribute="centerX" id="46L-ts-VPd"/>
+                            <constraint firstItem="5qN-W1-KFG" firstAttribute="centerX" secondItem="wcZ-2t-RKy" secondAttribute="centerX" id="6e4-b0-JeF"/>
+                            <constraint firstItem="CRP-Yd-IXg" firstAttribute="centerX" secondItem="wcZ-2t-RKy" secondAttribute="centerX" id="DLf-s6-HIh"/>
+                            <constraint firstItem="Qpf-3a-hf3" firstAttribute="top" secondItem="V4L-du-9bl" secondAttribute="bottom" constant="8" id="JxZ-v6-K9m"/>
+                            <constraint firstItem="V4L-du-9bl" firstAttribute="top" secondItem="CRP-Yd-IXg" secondAttribute="bottom" constant="93" id="QXL-N2-4YY"/>
+                            <constraint firstItem="CRP-Yd-IXg" firstAttribute="top" secondItem="oxS-Rf-Ibg" secondAttribute="bottom" constant="8" id="R7Q-lp-Q9G"/>
+                            <constraint firstItem="5qN-W1-KFG" firstAttribute="bottom" secondItem="nRE-am-3CZ" secondAttribute="bottom" id="YoM-8M-sIh"/>
+                            <constraint firstItem="oxS-Rf-Ibg" firstAttribute="centerX" secondItem="wcZ-2t-RKy" secondAttribute="centerX" id="buT-kx-ns8"/>
+                            <constraint firstItem="V4L-du-9bl" firstAttribute="centerY" secondItem="wcZ-2t-RKy" secondAttribute="centerY" id="hhy-FW-gmn"/>
+                            <constraint firstItem="V4L-du-9bl" firstAttribute="centerX" secondItem="wcZ-2t-RKy" secondAttribute="centerX" id="p6l-yI-O35"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nRE-am-3CZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MIO-3p-As5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3104.8000000000002" y="-1368.4729064039409"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="014-0s-E0M">
@@ -189,5 +256,6 @@
     </scenes>
     <resources>
         <image name="Linu_liest" width="1000" height="1000"/>
+        <image name="Linu_liest_Badge" width="1000" height="1000"/>
     </resources>
 </document>
