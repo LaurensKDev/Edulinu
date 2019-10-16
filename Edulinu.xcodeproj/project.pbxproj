@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D12937D232D7EF200936F40 /* UpdateClass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D12937C232D7EF200936F40 /* UpdateClass.storyboard */; };
 		0D12937F232D7F1800936F40 /* UpdateClassFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D12937E232D7F1800936F40 /* UpdateClassFormViewController.swift */; };
+		0D574614235641F5001283A7 /* NewsNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D574613235641F5001283A7 /* NewsNotification.storyboard */; };
+		0D57461623564205001283A7 /* NewsNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D57461523564205001283A7 /* NewsNotificationViewController.swift */; };
 		0D58AA1C233638D100DD7E7C /* ExtStringIsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */; };
 		0D58AA1E2336392D00DD7E7C /* ExtVCSlidePresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1D2336392D00DD7E7C /* ExtVCSlidePresent.swift */; };
 		0D58AA20233639A700DD7E7C /* ExtVCSlideDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */; };
@@ -23,6 +25,11 @@
 		0D98212B232D36F4000E1048 /* Splashscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D98212A232D36F4000E1048 /* Splashscreen.storyboard */; };
 		0D98212D232D3745000E1048 /* Maintenance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D98212C232D3745000E1048 /* Maintenance.storyboard */; };
 		0D9E37B123504C6700045C77 /* ExtElusResetUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E37B023504C6700045C77 /* ExtElusResetUserDefaults.swift */; };
+		0DA424F42355EC6C007FE1B4 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA424F32355EC6C007FE1B4 /* NewsTableViewController.swift */; };
+		0DA424F62355EC8E007FE1B4 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA424F52355EC8E007FE1B4 /* NewsDetailViewController.swift */; };
+		0DA424F82355ED0E007FE1B4 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA424F72355ED0E007FE1B4 /* News.swift */; };
+		0DA424FA2355F180007FE1B4 /* ExtDesRoundedImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA424F92355F180007FE1B4 /* ExtDesRoundedImages.swift */; };
+		0DA424FC2355F3AD007FE1B4 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA424FB2355F3AC007FE1B4 /* NewsTableViewCell.swift */; };
 		0DACC33F2322F74B00B2B56A /* LocalUserSettingsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */; };
 		0DB10197232D2E05004FF249 /* SplashFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB10196232D2E05004FF249 /* SplashFormViewController.swift */; };
 		0DC1FA83232ACF3E00DF5A88 /* AppInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */; };
@@ -80,6 +87,8 @@
 /* Begin PBXFileReference section */
 		0D12937C232D7EF200936F40 /* UpdateClass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateClass.storyboard; sourceTree = "<group>"; };
 		0D12937E232D7F1800936F40 /* UpdateClassFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateClassFormViewController.swift; sourceTree = "<group>"; };
+		0D574613235641F5001283A7 /* NewsNotification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsNotification.storyboard; sourceTree = "<group>"; };
+		0D57461523564205001283A7 /* NewsNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNotificationViewController.swift; sourceTree = "<group>"; };
 		0D58AA1B233638D100DD7E7C /* ExtStringIsName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtStringIsName.swift; sourceTree = "<group>"; };
 		0D58AA1D2336392D00DD7E7C /* ExtVCSlidePresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtVCSlidePresent.swift; sourceTree = "<group>"; };
 		0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtVCSlideDismiss.swift; sourceTree = "<group>"; };
@@ -97,6 +106,11 @@
 		0D98212E232D6455000E1048 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		0D98212F232D6455000E1048 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0D9E37B023504C6700045C77 /* ExtElusResetUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtElusResetUserDefaults.swift; sourceTree = "<group>"; };
+		0DA424F32355EC6C007FE1B4 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		0DA424F52355EC8E007FE1B4 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		0DA424F72355ED0E007FE1B4 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		0DA424F92355F180007FE1B4 /* ExtDesRoundedImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtDesRoundedImages.swift; sourceTree = "<group>"; };
+		0DA424FB2355F3AC007FE1B4 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserSettingsSetup.swift; sourceTree = "<group>"; };
 		0DB10196232D2E05004FF249 /* SplashFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFormViewController.swift; sourceTree = "<group>"; };
 		0DC10A9C234B976600FCE49A /* Edulinu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Edulinu.entitlements; sourceTree = "<group>"; };
@@ -179,6 +193,7 @@
 				0D58AA1F233639A700DD7E7C /* ExtVCSlideDismiss.swift */,
 				0DC6DD3223378DDB0094761A /* ExtUpdateSearchResults.swift */,
 				0D9E37B023504C6700045C77 /* ExtElusResetUserDefaults.swift */,
+				0DA424F92355F180007FE1B4 /* ExtDesRoundedImages.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,6 +214,18 @@
 				0D7E0906232E87140092269E /* MyEdAddFavouriteTeacherTableViewController.swift */,
 			);
 			path = MyEdulinu;
+			sourceTree = "<group>";
+		};
+		0DA424F02355EC28007FE1B4 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				0DA424F32355EC6C007FE1B4 /* NewsTableViewController.swift */,
+				0DA424FB2355F3AC007FE1B4 /* NewsTableViewCell.swift */,
+				0DA424F52355EC8E007FE1B4 /* NewsDetailViewController.swift */,
+				0D574613235641F5001283A7 /* NewsNotification.storyboard */,
+				0D57461523564205001283A7 /* NewsNotificationViewController.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		0DACC3402322F76600B2B56A /* Setup */ = {
@@ -268,6 +295,7 @@
 				0D5F095E23119269008CD288 /* MoreSection.swift */,
 				0D5F09622311CB2D008CD288 /* MoreEntry.swift */,
 				0DCDD018232CF68D00FD5CD9 /* Maintenance.swift */,
+				0DA424F72355ED0E007FE1B4 /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC10A9C234B976600FCE49A /* Edulinu.entitlements */,
+				0DA424F02355EC28007FE1B4 /* News */,
 				0D5EE453232E94D4004C7DA9 /* Mail */,
 				0D7E0908232E948F0092269E /* MyEdulinu */,
 				0D129380232D7F1D00936F40 /* UpdateClass */,
@@ -460,6 +489,7 @@
 				0D98212D232D3745000E1048 /* Maintenance.storyboard in Resources */,
 				0D5E8002234DDAA7003BDD1F /* GoogleService-Info.plist in Resources */,
 				33C3B871222DBD070063CDB1 /* LaunchScreen.storyboard in Resources */,
+				0D574614235641F5001283A7 /* NewsNotification.storyboard in Resources */,
 				0D7E0905232E867D0092269E /* AddFavouriteTeacher.storyboard in Resources */,
 				33D22732222FA5A100418F26 /* Assets.xcassets in Resources */,
 				33C3B86C222DBD050063CDB1 /* Main.storyboard in Resources */,
@@ -549,15 +579,19 @@
 			files = (
 				33BCBE8022732A4E00561EDC /* SplashGetStartedViewController.swift in Sources */,
 				33BB6475222DBFAB007247C8 /* MyEdulinuViewController.swift in Sources */,
+				0D57461623564205001283A7 /* NewsNotificationViewController.swift in Sources */,
 				0DCDD017232CF27C00FD5CD9 /* MaintenanceViewController.swift in Sources */,
 				33ACFF4122746C4700207C2E /* MailViewController.swift in Sources */,
+				0DA424FC2355F3AD007FE1B4 /* NewsTableViewCell.swift in Sources */,
 				0D9E37B123504C6700045C77 /* ExtElusResetUserDefaults.swift in Sources */,
 				0D58AA1E2336392D00DD7E7C /* ExtVCSlidePresent.swift in Sources */,
 				0D5F09612311942C008CD288 /* MoreTableViewController.swift in Sources */,
 				0DFAFC3F2310121D005D52EC /* App.swift in Sources */,
+				0DA424F42355EC6C007FE1B4 /* NewsTableViewController.swift in Sources */,
 				0DB10197232D2E05004FF249 /* SplashFormViewController.swift in Sources */,
 				0DFAFC4823101866005D52EC /* AppsTableViewController.swift in Sources */,
 				0D7E0907232E87140092269E /* MyEdAddFavouriteTeacherTableViewController.swift in Sources */,
+				0DA424FA2355F180007FE1B4 /* ExtDesRoundedImages.swift in Sources */,
 				0D982129232D2FB7000E1048 /* SplashWelcomeViewController.swift in Sources */,
 				0DC1FA83232ACF3E00DF5A88 /* AppInfoTableViewController.swift in Sources */,
 				0D5F095F23119269008CD288 /* MoreSection.swift in Sources */,
@@ -567,9 +601,11 @@
 				0DFAFC422310139F005D52EC /* Teacher.swift in Sources */,
 				0D5F09632311CB2D008CD288 /* MoreEntry.swift in Sources */,
 				0D58AA1C233638D100DD7E7C /* ExtStringIsName.swift in Sources */,
+				0DA424F82355ED0E007FE1B4 /* News.swift in Sources */,
 				0D58AA20233639A700DD7E7C /* ExtVCSlideDismiss.swift in Sources */,
 				0DC6DD3323378DDB0094761A /* ExtUpdateSearchResults.swift in Sources */,
 				33C3B867222DBD050063CDB1 /* AppDelegate.swift in Sources */,
+				0DA424F62355EC8E007FE1B4 /* NewsDetailViewController.swift in Sources */,
 				0DEFDCEE22E63346009D73CA /* ExtStringIsAlphanumeric.swift in Sources */,
 				0D12937F232D7F1800936F40 /* UpdateClassFormViewController.swift in Sources */,
 				0D5F095B23108496008CD288 /* TeacherTableViewController.swift in Sources */,
@@ -785,7 +821,7 @@
 				CODE_SIGN_ENTITLEMENTS = Edulinu/Edulinu.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1170003;
+				CURRENT_PROJECT_VERSION = 1170004;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = Edulinu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -811,7 +847,7 @@
 				CODE_SIGN_ENTITLEMENTS = Edulinu/Edulinu.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1170003;
+				CURRENT_PROJECT_VERSION = 1170004;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = Edulinu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;

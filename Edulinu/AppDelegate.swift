@@ -24,22 +24,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // OneSignal
+        // OneSignal: Get AdditionalData from notification and forward if notification type is news
+        let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
+          let payload: OSNotificationPayload = result!.notification.payload
+
+          if payload.additionalData != nil {
+             let additionalData = payload.additionalData
+             if additionalData?["openNewsWithId"] != nil {
+                let newsIdFromOneSignal = additionalData?["openNewsWithId"] as! String
+                let newsId = Int(newsIdFromOneSignal) ?? -1
+                
+                var news: [News] = []
+                let ref = Database.database().reference(withPath: "news")
+                ref.queryOrdered(byChild: "newsId").queryEqual(toValue: newsId).observe(.value, with: { snapshot in
+                    var newNews: [News] = []
+                    for child in snapshot.children {
+                        if let snapshot = child as? DataSnapshot,
+                            let newsEntry = News(snapshot: snapshot) {
+                            newNews.append(newsEntry)
+                        }
+                    }
+                    
+                    news = newNews
+                    
+                    if news.isEmpty {
+                    } else {
+                        
+                        let newsEntry = news[0]
+                        let newsEntryDict: [String: String] = ["title": "\(newsEntry.title)", "author": "\(newsEntry.author)", "text": "\(newsEntry.text)"]
+                        
+                        let storyboard = UIStoryboard(name: "NewsNotification", bundle: nil)
+                        let newsNotificationVC = storyboard.instantiateViewController(withIdentifier: "NewsNotificationViewController") as! NewsNotificationViewController
+                        
+                        newsNotificationVC.newsEntry = newsEntryDict
+                        
+                        newsNotificationVC.modalPresentationStyle = .fullScreen
+                        
+                        self.window?.rootViewController?.present(newsNotificationVC, animated: true, completion: nil)
+                        
+                    }
+                })
+                
+             }
+          }
+        }
+        
+        
+        // OneSignal: Init Settings
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
 
-        // Replace 'YOUR_APP_ID' with your OneSignal App ID.
+        // OneSignal: Init
         OneSignal.initWithLaunchOptions(launchOptions,
         appId: "0ffcee62-6b71-417d-8123-a276cf3cc936",
-        handleNotificationAction: nil,
+        handleNotificationAction: notificationOpenedBlock,
         settings: onesignalInitSettings)
-
         OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
 
-        // Recommend moving the below line to prompt for push after informing the user about
-        //   how your app will use them.
-        OneSignal.promptForPushNotifications(userResponse: { accepted in
-        print("User accepted notifications: \(accepted)")
-        })
+        if edulinuLocalUserSettings.bool(forKey: Keys.ElusDidSplash) {
+            OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+            })
+        }
         
         // Database
         let ref = Database.database().reference(withPath: "maintenance")

@@ -171,6 +171,10 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
         
             openSettings()
             
+        } else if entry.onClickAction == "openNews" {
+        
+            openNews()
+            
         } else {
             
             onClickActionNotAvailable()
@@ -237,6 +241,12 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
     func openSettings() {
         
         performSegue(withIdentifier: "openSettings", sender: self)
+        
+    }
+    
+    func openNews() {
+        
+        performSegue(withIdentifier: "openNews", sender: self)
         
     }
     
