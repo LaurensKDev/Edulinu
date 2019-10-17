@@ -81,7 +81,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if edulinuLocalUserSettings.bool(forKey: Keys.ElusDidSplash) {
             OneSignal.promptForPushNotifications(userResponse: { accepted in
-            print("User accepted notifications: \(accepted)")
+                if accepted {
+                    let firstName = edulinuLocalUserSettings.string(forKey: Keys.ElusFirstName) ?? ""
+                    let lastName = edulinuLocalUserSettings.string(forKey: Keys.ElusLastName) ?? ""
+                    let userRole = edulinuLocalUserSettings.string(forKey: Keys.ElusUserRole) ?? ""
+                    let pmsClass = edulinuLocalUserSettings.string(forKey: Keys.ElusClass) ?? ""
+                    
+                    let oneSignalTagsDict: [String: String] = ["firstName": firstName, "lastName": lastName, "userRole": userRole, "pmsClass": pmsClass]
+                    OneSignal.sendTags(oneSignalTagsDict)
+                }
             })
         }
         

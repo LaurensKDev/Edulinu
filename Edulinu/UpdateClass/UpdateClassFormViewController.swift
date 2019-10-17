@@ -34,7 +34,7 @@ class UpdateClassFormViewController: FormViewController {
             if pmsClass != "Bitte auswählen" {
                 
                 edulinuLocalUserSettings.set(pmsClass, forKey: Keys.ElusClass)
-                edulinuLocalUserSettings.set(Date(), forKey: Keys.ElusClassLastUpdateDate)
+                edulinuLocalUserSettings.set(Date(), forKey: Keys.ElusLastUpdateDate)
                 
                 self.dismiss(animated: true, completion: nil)
                 

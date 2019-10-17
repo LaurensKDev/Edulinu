@@ -16,6 +16,8 @@ class SplashGetStartedViewController: UIViewController {
     
     @IBAction func startAppButton(_ sender: Any) {
         
+        edulinuLocalUserSettings.set(true, forKey: Keys.ElusDidSplash)
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rootViewController = storyboard.instantiateViewController(withIdentifier: "RootViewController") as! UITabBarController
         rootViewController.modalTransitionStyle = .crossDissolve

@@ -31,17 +31,18 @@ class SplashFormViewController: FormViewController {
                 
                 if pmsClass == "Ich bin ein Elternteil" {
                     edulinuLocalUserSettings.set("parent", forKey: Keys.ElusUserRole)
+                    edulinuLocalUserSettings.set("noClass", forKey: Keys.ElusClass)
                 } else if pmsClass == "Ich bin Lehrer/in" {
                     edulinuLocalUserSettings.set("teacher", forKey: Keys.ElusUserRole)
+                    edulinuLocalUserSettings.set("noClass", forKey: Keys.ElusClass)
                 } else {
                     edulinuLocalUserSettings.set("student", forKey: Keys.ElusUserRole)
+                    edulinuLocalUserSettings.set(pmsClass, forKey: Keys.ElusClass)
                 }
                 
                 edulinuLocalUserSettings.set(firstName, forKey: Keys.ElusFirstName)
                 edulinuLocalUserSettings.set(lastName, forKey: Keys.ElusLastName)
-                edulinuLocalUserSettings.set(pmsClass, forKey: Keys.ElusClass)
-                edulinuLocalUserSettings.set(Date(), forKey: Keys.ElusClassLastUpdateDate)
-                edulinuLocalUserSettings.set(true, forKey: Keys.ElusDidSplash)
+                edulinuLocalUserSettings.set(Date(), forKey: Keys.ElusLastUpdateDate)
                 edulinuLocalUserSettings.set([""], forKey: Keys.ElusFavouriteTeachers)
                 
                 let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
@@ -106,7 +107,7 @@ class SplashFormViewController: FormViewController {
             
             <<< PickerInlineRow<String>(){
                 $0.title = "Klasse auswählen"
-                $0.options = ["Ich bin ein Elternteil","1A","1B","1C","1D","2A","2B","2C","2D","3A","3B","3C","3D","4A","4B","4C","4D", "Ich bin Lehrer/in"]
+                $0.options = ["Bitte auswählen","Ich bin ein Elternteil","1A","1B","1C","1D","2A","2B","2C","2D","3A","3B","3C","3D","4A","4B","4C","4D", "Ich bin Lehrer/in"]
                 $0.value = "Bitte auswählen"
                 $0.tag = "pmsClass"
                 $0.add(rule: RuleRequired())

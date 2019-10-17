@@ -18,7 +18,7 @@ struct Keys {
     static let ElusLastName = "ElusLastName"
     static let ElusUserRole = "ElusUserRole" // "student", "parent" or "teacher"
     static let ElusClass = "ElusClass"
-    static let ElusClassLastUpdateDate = "ElusClassLastUpdateDate"
+    static let ElusLastUpdateDate = "ElusLastUpdateDate"
     static let ElusHasAgreedToSentStatistics = "ElusHasAgreedToSentStatistics"
     static let ElusFavouriteTeachers = "ElusFavouriteTeachers"
     

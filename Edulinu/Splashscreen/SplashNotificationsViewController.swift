@@ -16,6 +16,14 @@ class SplashNotificationsViewController: UIViewController {
         OneSignal.promptForPushNotifications(userResponse: { accepted in
             if accepted {
                 
+                let firstName = edulinuLocalUserSettings.string(forKey: Keys.ElusFirstName) ?? ""
+                let lastName = edulinuLocalUserSettings.string(forKey: Keys.ElusLastName) ?? ""
+                let userRole = edulinuLocalUserSettings.string(forKey: Keys.ElusUserRole) ?? ""
+                let pmsClass = edulinuLocalUserSettings.string(forKey: Keys.ElusClass) ?? ""
+                
+                let oneSignalTagsDict: [String: String] = ["firstName": firstName, "lastName": lastName, "userRole": userRole, "pmsClass": pmsClass]
+                OneSignal.sendTags(oneSignalTagsDict)
+                
                 let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)
                 let splashGetStartedViewController = storyboard.instantiateViewController(withIdentifier: "SplashGetStartedViewController") as! SplashGetStartedViewController
                 splashGetStartedViewController.modalTransitionStyle = .crossDissolve
