@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -16,43 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="newsEntry.title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-n8-0ge">
-                                <rect key="frame" x="16" y="170" width="382" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="newsEntry.title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-n8-0ge">
+                                <rect key="frame" x="116" y="170" width="182" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="newsEntry.text" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl1-kY-Xvw">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="newsEntry.text" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl1-kY-Xvw">
                                 <rect key="frame" x="16" y="246" width="382" height="544"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="newsEntry.author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKE-ac-TLS">
-                                <rect key="frame" x="16" y="210" width="382" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="newsEntry.author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKE-ac-TLS">
+                                <rect key="frame" x="150.66666666666666" y="210" width="112.66666666666666" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40451300140000002" green="0.40296608210000001" blue="0.43900558350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Linu_liest" translatesAutoresizingMaskIntoConstraints="NO" id="Ryc-VV-WJ8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linu_liest" translatesAutoresizingMaskIntoConstraints="NO" id="Ryc-VV-WJ8">
                                 <rect key="frame" x="172" y="51" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3lY-RX-MFb"/>
+                                    <constraint firstAttribute="width" constant="70" id="Hpy-iD-t6T"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw8-1v-0wU">
-                                <rect key="frame" x="186" y="141" width="43" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw8-1v-0wU">
+                                <rect key="frame" x="185.66666666666666" y="141" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uy-pK-bqN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uy-pK-bqN">
                                 <rect key="frame" x="20" y="810" width="374" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.018844775859999999" green="0.51769590379999997" blue="0.99987560509999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="4wE-zE-2mQ"/>
+                                </constraints>
                                 <state key="normal" title="Schließen">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
@@ -70,6 +71,24 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yl1-kY-Xvw" firstAttribute="leading" secondItem="Nvp-DE-NRR" secondAttribute="leading" constant="16" id="5EC-md-WVd"/>
+                            <constraint firstItem="Ryc-VV-WJ8" firstAttribute="top" secondItem="Nvp-DE-NRR" secondAttribute="top" constant="7" id="86Z-OA-0UM"/>
+                            <constraint firstItem="6Uy-pK-bqN" firstAttribute="centerX" secondItem="Buw-z1-Q5c" secondAttribute="centerX" id="IQd-fF-15e"/>
+                            <constraint firstItem="Nvp-DE-NRR" firstAttribute="trailing" secondItem="6Uy-pK-bqN" secondAttribute="trailing" constant="20" id="Kce-MF-0zS"/>
+                            <constraint firstItem="Nvp-DE-NRR" firstAttribute="trailing" secondItem="yl1-kY-Xvw" secondAttribute="trailing" constant="16" id="NOe-GO-CLI"/>
+                            <constraint firstItem="HKE-ac-TLS" firstAttribute="top" secondItem="gnN-n8-0ge" secondAttribute="bottom" constant="6" id="Osj-im-SLI"/>
+                            <constraint firstItem="qw8-1v-0wU" firstAttribute="centerX" secondItem="Buw-z1-Q5c" secondAttribute="centerX" id="QeG-jU-GfI"/>
+                            <constraint firstItem="gnN-n8-0ge" firstAttribute="top" secondItem="qw8-1v-0wU" secondAttribute="bottom" constant="8" id="VHe-wk-g6s"/>
+                            <constraint firstItem="Ryc-VV-WJ8" firstAttribute="centerX" secondItem="Buw-z1-Q5c" secondAttribute="centerX" id="XGq-6p-PPr"/>
+                            <constraint firstItem="6Uy-pK-bqN" firstAttribute="top" secondItem="yl1-kY-Xvw" secondAttribute="bottom" constant="20" id="cYB-vd-YeN"/>
+                            <constraint firstItem="6Uy-pK-bqN" firstAttribute="leading" secondItem="Nvp-DE-NRR" secondAttribute="leading" constant="20" id="fRA-ym-jpq"/>
+                            <constraint firstItem="yl1-kY-Xvw" firstAttribute="top" secondItem="HKE-ac-TLS" secondAttribute="bottom" constant="19" id="feY-wQ-Gfg"/>
+                            <constraint firstItem="6Uy-pK-bqN" firstAttribute="bottom" secondItem="Nvp-DE-NRR" secondAttribute="bottom" id="gdh-ha-X4y"/>
+                            <constraint firstItem="qw8-1v-0wU" firstAttribute="top" secondItem="Ryc-VV-WJ8" secondAttribute="bottom" constant="20" id="gdp-Zs-42R"/>
+                            <constraint firstItem="gnN-n8-0ge" firstAttribute="centerX" secondItem="Buw-z1-Q5c" secondAttribute="centerX" id="ud5-Iy-bRG"/>
+                            <constraint firstItem="HKE-ac-TLS" firstAttribute="centerX" secondItem="Buw-z1-Q5c" secondAttribute="centerX" id="xd3-Cc-gzi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Nvp-DE-NRR"/>
                     </view>
                     <navigationItem key="navigationItem" title="News" id="MLj-af-2zf"/>
