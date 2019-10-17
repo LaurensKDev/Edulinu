@@ -51,12 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     } else {
                         
                         let newsEntry = news[0]
-                        let newsEntryDict: [String: String] = ["title": "\(newsEntry.title)", "author": "\(newsEntry.author)", "text": "\(newsEntry.text)"]
                         
                         let storyboard = UIStoryboard(name: "NewsNotification", bundle: nil)
                         let newsNotificationVC = storyboard.instantiateViewController(withIdentifier: "NewsNotificationViewController") as! NewsNotificationViewController
                         
-                        newsNotificationVC.newsEntry = newsEntryDict
+                        newsNotificationVC.newsEntry = newsEntry
                         
                         newsNotificationVC.modalPresentationStyle = .fullScreen
                         

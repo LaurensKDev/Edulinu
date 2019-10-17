@@ -12,7 +12,7 @@ import OneSignal
 
 class NewsNotificationViewController: UIViewController {
 
-    var newsEntry: [String: String]?
+    var newsEntry: News?
     
     @IBOutlet weak var newsTitleLabel: UILabel!
     @IBOutlet weak var newsAuthorLabel: UILabel!
@@ -31,9 +31,9 @@ class NewsNotificationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        newsTitleLabel?.text = newsEntry!["title"] ?? ""
-        newsAuthorLabel?.text = newsEntry!["author"] ?? ""
-        newsTextTextView?.text = newsEntry!["text"] ?? ""
+        newsTitleLabel?.text = newsEntry?.title
+        newsAuthorLabel?.text = newsEntry?.author
+        newsTextTextView?.text = newsEntry?.text
         
     }
 
