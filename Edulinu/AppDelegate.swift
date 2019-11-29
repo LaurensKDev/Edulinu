@@ -87,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let userRole = edulinuLocalUserSettings.string(forKey: Keys.ElusUserRole) ?? ""
                     let pmsClass = edulinuLocalUserSettings.string(forKey: Keys.ElusClass) ?? ""
                     
-                    let oneSignalTagsDict: [String: String] = ["firstName": firstName, "lastName": lastName, "userRole": userRole, "pmsClass": pmsClass]
+                    let oneSignalTagsDict: [String: String] = ["firstName": firstName, "lastName": lastName, "userRole": userRole, "pmsClass": pmsClass, "platform": "iOS"]
                     OneSignal.sendTags(oneSignalTagsDict)
                 }
             })

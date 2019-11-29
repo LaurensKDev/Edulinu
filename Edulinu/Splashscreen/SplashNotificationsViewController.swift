@@ -21,7 +21,7 @@ class SplashNotificationsViewController: UIViewController {
                 let userRole = edulinuLocalUserSettings.string(forKey: Keys.ElusUserRole) ?? ""
                 let pmsClass = edulinuLocalUserSettings.string(forKey: Keys.ElusClass) ?? ""
                 
-                let oneSignalTagsDict: [String: String] = ["firstName": firstName, "lastName": lastName, "userRole": userRole, "pmsClass": pmsClass]
+                let oneSignalTagsDict: [String: String] = ["firstName": firstName, "lastName": lastName, "userRole": userRole, "pmsClass": pmsClass, "platform": "iOS"]
                 OneSignal.sendTags(oneSignalTagsDict)
                 
                 let storyboard = UIStoryboard(name: "Splashscreen", bundle: nil)

@@ -120,13 +120,11 @@ class MoreTableViewController: UITableViewController, SFSafariViewControllerDele
             
             for entry in entriesToMatch {
                 
-                if entry.section == section.identifier {
+                if entry.section == section.identifier && entry.enabledIos {
                 
-                    matchedEntries.append(MoreEntry(URL: entry.URL, desc: entry.desc, id: entry.id, onClickAction: entry.onClickAction, section: entry.section, title: entry.title))
-                    
+                    matchedEntries.append(entry)
                     
                 }
-                
                 
             }
             

@@ -15,16 +15,18 @@ struct MoreEntry {
     let key: String
     let URL: String
     let desc: String
+    let enabledIos: Bool
     let id: Int
     let onClickAction: String
     let section: String
     let title: String
     
-    init(URL: String, desc: String, id: Int, onClickAction: String, section: String, title: String, key: String = "") {
+    init(URL: String, desc: String, enabledIos: Bool, id: Int, onClickAction: String, section: String, title: String, key: String = "") {
         self.ref = nil
         self.key = key
         self.URL = URL
         self.desc = desc
+        self.enabledIos = enabledIos
         self.id = id
         self.onClickAction = onClickAction
         self.section = section
@@ -36,6 +38,7 @@ struct MoreEntry {
             let value = snapshot.value as? [String: AnyObject],
             let URL = value["URL"] as? String,
             let desc = value["desc"] as? String,
+            let enabledIos = value["enabledIos"] as? Bool,
             let id = value["id"] as? Int,
             let onClickAction = value["onClickAction"] as? String,
             let section = value["section"] as? String,
@@ -47,6 +50,7 @@ struct MoreEntry {
         self.key = snapshot.key
         self.URL = URL
         self.desc = desc
+        self.enabledIos = enabledIos
         self.id = id
         self.onClickAction = onClickAction
         self.section = section
@@ -58,6 +62,7 @@ struct MoreEntry {
         return [
             "URL": URL,
             "desc": desc,
+            "enabledIos": enabledIos,
             "id": id,
             "onClickAction": onClickAction,
             "sectiom": section,
