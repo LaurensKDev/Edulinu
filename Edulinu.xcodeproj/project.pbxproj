@@ -115,6 +115,8 @@
 		0DA424FB2355F3AC007FE1B4 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		0DACC33E2322F74B00B2B56A /* LocalUserSettingsSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserSettingsSetup.swift; sourceTree = "<group>"; };
 		0DB10196232D2E05004FF249 /* SplashFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFormViewController.swift; sourceTree = "<group>"; };
+		0DBC8E2A23A808B9004EF52C /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0DBC8E2B23A808BB004EF52C /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DC10A9C234B976600FCE49A /* Edulinu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Edulinu.entitlements; sourceTree = "<group>"; };
 		0DC1FA82232ACF3E00DF5A88 /* AppInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoTableViewController.swift; sourceTree = "<group>"; };
 		0DC6DD3223378DDB0094761A /* ExtUpdateSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUpdateSearchResults.swift; sourceTree = "<group>"; };
@@ -138,8 +140,6 @@
 		33C3B863222DBD050063CDB1 /* Edulinu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edulinu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C3B866222DBD050063CDB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C3B868222DBD050063CDB1 /* MyEdulinuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEdulinuViewController.swift; sourceTree = "<group>"; };
-		33C3B86B222DBD050063CDB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		33C3B870222DBD070063CDB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33C3B872222DBD070063CDB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33D22731222FA5A100418F26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33E3DDF1226E23EB0019CFCF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -459,12 +459,11 @@
 			};
 			buildConfigurationList = 33C3B85E222DBD050063CDB1 /* Build configuration list for PBXProject "Edulinu" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = de;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
 				de,
+				Base,
 			);
 			mainGroup = 33C3B85A222DBD050063CDB1;
 			productRefGroup = 33C3B864222DBD050063CDB1 /* Products */;
@@ -630,8 +629,8 @@
 		33C3B86A222DBD050063CDB1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				33C3B86B222DBD050063CDB1 /* Base */,
 				0D98212E232D6455000E1048 /* de */,
+				0DBC8E2A23A808B9004EF52C /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -639,8 +638,8 @@
 		33C3B86F222DBD070063CDB1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				33C3B870222DBD070063CDB1 /* Base */,
 				0D98212F232D6455000E1048 /* de */,
+				0DBC8E2B23A808BB004EF52C /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -655,7 +654,7 @@
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1180002;
+				CURRENT_PROJECT_VERSION = 1190001;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -664,7 +663,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.8;
+				MARKETING_VERSION = 1.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.EdulinuApp.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -680,7 +679,7 @@
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1180002;
+				CURRENT_PROJECT_VERSION = 1190001;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -689,7 +688,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.8;
+				MARKETING_VERSION = 1.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.EdulinuApp.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -825,7 +824,7 @@
 				CODE_SIGN_ENTITLEMENTS = Edulinu/Edulinu.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1180002;
+				CURRENT_PROJECT_VERSION = 1190001;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = Edulinu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -833,7 +832,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.8;
+				MARKETING_VERSION = 1.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.EdulinuApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -851,7 +850,7 @@
 				CODE_SIGN_ENTITLEMENTS = Edulinu/Edulinu.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1180002;
+				CURRENT_PROJECT_VERSION = 1190001;
 				DEVELOPMENT_TEAM = 8TS77B7LU7;
 				INFOPLIST_FILE = Edulinu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -859,7 +858,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.8;
+				MARKETING_VERSION = 1.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurensk.EdulinuApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vqd-Ab-NG9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vqd-Ab-NG9">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -709,11 +709,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vbf-QH-HnD" id="Oe5-h9-4El">
-                                    <rect key="frame" x="0.0" y="0.0" width="347.66666666666669" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBm-gk-Fq5">
-                                            <rect key="frame" x="15.999999999999986" y="11" width="224.66666666666663" height="23"/>
+                                            <rect key="frame" x="16" y="11" width="225" height="23"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="287" id="V8q-FX-FDL"/>
                                             </constraints>
@@ -722,14 +722,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOh-3K-li2">
-                                            <rect key="frame" x="15" y="31" width="225.66666666666666" height="69"/>
+                                            <rect key="frame" x="15" y="31" width="226" height="69"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4lz-VQ-WGW">
-                                            <rect key="frame" x="248.66666666666663" y="11" width="89" height="78"/>
+                                            <rect key="frame" x="249" y="11" width="89" height="78"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="78" id="FsV-yT-hCc"/>
                                                 <constraint firstAttribute="width" constant="89" id="evl-Bc-024"/>
@@ -774,7 +774,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="News" id="MIP-Am-MOL"/>
                     <connections>
-                        <segue destination="gfX-la-N9i" kind="show" id="low-Jo-ZfC"/>
+                        <segue destination="gfX-la-N9i" kind="show" identifier="openNewsDetailView" id="low-Jo-ZfC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLf-fq-pk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -840,8 +840,8 @@
     <resources>
         <image name="Linu_liest" width="1000" height="1000"/>
         <image name="app.badge.fill" catalog="system" width="64" height="58"/>
-        <image name="ellipsis.circle" catalog="system" width="64" height="62"/>
-        <image name="heart.circle.fill" catalog="system" width="64" height="62"/>
+        <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
+        <image name="heart.circle.fill" catalog="system" width="64" height="60"/>
         <image name="moon" width="619" height="604"/>
         <image name="person.2.fill" catalog="system" width="64" height="40"/>
         <image name="tray.full.fill" catalog="system" width="64" height="44"/>
